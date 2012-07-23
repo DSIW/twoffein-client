@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: twoffein-client [options]
+
+Options:
+    -t, --tweet DRINK                Tweet your drinking drink
+    -p, --list-profile               List your profile
+    -d, --list-drinks                List all drinks
+        --version                    Show help/version info
+```
 
 ## Contributing
 
