@@ -1,5 +1,5 @@
 require "twoffein-client/version"
-require "twoffein-client/env"
+require "twoffein-client/credentials"
 
 require 'json'
 require 'net/http'
