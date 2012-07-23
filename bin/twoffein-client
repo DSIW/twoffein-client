@@ -1,0 +1,70 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'methadone'
+require 'twoffein-client'
+
+class App
+  include Methadone::Main
+  include Methadone::CLILogging
+  include Twoffein
+
+  main do # Add args you want: |like,so|
+    # TODO
+    if options["grep"]
+      puts "Drink  (Key)"
+      puts Drink.search(/#{options["grep-drinks"]}/i)
+      puts Profile.search(/#{options["grep-drinks"]}/i)
+    end
+
+    if options[:tweet]
+      tweet = Tweet.new(options[:tweet])
+      info = tweet.publish
+      p tweet
+      puts 'Info: ' + info[:info]
+      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+    end
+
+    if options["list-profile"]
+      puts Profile.get
+    end
+
+    if options["list-drinks"]
+      #puts Util.format('Drink') + 'Key'
+      puts "Drink  (Key)"
+      puts Drinks.new
+    end
+  end
+
+  DESC = <<-EODESC
+Client for API twoffein.de
+API in version 0.1
+  EODESC
+  description DESC.chomp
+
+  #
+  # Accept flags via:
+  on("-t","--tweet DRINK","Tweet your drinking drink")
+  # options[flag] will contain VAL
+  #
+  # Specify switches via:
+  on("-p","--list-profile","List your profile")
+  on("-d","--list-drinks","List all drinks")
+
+  on("-g","--grep PATTERN","Search all drinks")
+  #on("-gp","--grep-profiles PATTERN","Search all profiles")
+  #
+  # Or, just call OptionParser methods on opts
+  #
+  # Require an argument
+  # arg :some_arg 
+  #
+  # # Make an argument optional
+  #arg :optional_arg, :optional
+
+  version Twoffein::Client::VERSION
+
+  use_log_level_option
+
+  go!
+end

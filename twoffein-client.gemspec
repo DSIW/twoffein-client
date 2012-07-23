@@ -4,8 +4,8 @@ require File.expand_path('../lib/twoffein-client/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["DSIW"]
   gem.email         = ["dsiw@dsiw-it.de"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Client for twoffein.de API}
+  gem.summary       = %q{Client for twoffein.de API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "twoffein-client"
   gem.require_paths = ["lib"]
   gem.version       = Twoffein::Client::VERSION
+  gem.add_development_dependency('rdoc')
+  gem.add_development_dependency('aruba')
+  gem.add_development_dependency('rake','~> 0.9.2')
+  gem.add_development_dependency('pry')
+  gem.add_dependency('methadone', '~>1.0.0.rc4')
 end
