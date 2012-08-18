@@ -9,7 +9,7 @@ class App
   include Methadone::CLILogging
   include Twoffein
 
-  main do # Add args you want: |like,so|
+  main do |receiver|
     # TODO
     if options["grep"]
       puts "Drink  (Key)"
@@ -21,6 +21,14 @@ class App
       tweet = Tweet.new(options[:tweet])
       info = tweet.publish
       p tweet
+      puts 'Info: ' + info[:info]
+      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+    end
+
+    if options["cookie"]
+      cookie = Cookie.new(receiver)
+      info = cookie.send
+      p cookie
       puts 'Info: ' + info[:info]
       puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
     end
@@ -45,6 +53,8 @@ API in version 0.1
   #
   # Accept flags via:
   on("-t","--tweet DRINK","Tweet your drinking drink")
+  on("-c","--cookie","Send a cookie to your Receiver")
+  #on("-r","--recv RECEIVER","Receiver of a tweet or cookie")
   # options[flag] will contain VAL
   #
   # Specify switches via:
@@ -60,7 +70,7 @@ API in version 0.1
   # arg :some_arg 
   #
   # # Make an argument optional
-  #arg :optional_arg, :optional
+  arg :receiver, :optional
 
   version Twoffein::Client::VERSION
 
