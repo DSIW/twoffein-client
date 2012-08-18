@@ -4,6 +4,8 @@ TODO: Write a gem description
 
 ## Installation
 
+This gem isn't deployed on rubygems.org yet. Please clone this repository and run `rake install`.
+
 Add this line to your application's Gemfile:
 
     gem 'twoffein-client'
