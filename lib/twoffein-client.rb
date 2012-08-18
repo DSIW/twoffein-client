@@ -212,7 +212,7 @@ module Twoffein
 
     def to_s
       s = "Ich trinke gerade #{@drink}"
-      s << "mit #{@with_screen_name}" if @with_screen_name
+      s << " mit #{@with_screen_name}" if @with_screen_name
     end
   end
 

@@ -17,8 +17,8 @@ class App
       puts Profile.search(/#{options["grep-drinks"]}/i)
     end
 
-    if options[:tweet]
-      tweet = Tweet.new(options[:tweet])
+    if options["tweet"]
+      tweet = Tweet.new(options["tweet"], receiver)
       info = tweet.publish
       p tweet
       puts 'Info: ' + info[:info]
