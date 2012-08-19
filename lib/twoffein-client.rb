@@ -166,52 +166,52 @@ module Twoffein
     end
   end
 
-  class Profile
-    attr_reader :quest,
+  Profile = Struct.new(:quest,
       :drink,
       :rank,
       :rank_title,
       :drunken,
       :bluttwoffeinkonzentration,
       :first_login,
-      :screen_name
-
-    def initialize(hash)
-      @quest                     = hash[:quest]
-      @drink                     = hash[:drink]
-      @rank                      = hash[:rank]
-      @rank_title                = hash[:rank_title]
-      @drunken                   = hash[:drunken]
-      @bluttwoffeinkonzentration = hash[:bluttwoffeinkonzentration]
-      @first_login               = hash[:first_login]
-      @screen_name               = hash[:screen_name]
+      :screen_name)
+  class Profile
+    def initialize(hash=nil)
+      return super(*hash) if hash.nil?
+      hash.each { |key,val| self[key] = val if members.include? key }
     end
 
     def self.get(profile="")
-      Profile.new(HTTP.get "profile", :profile => profile)
+      new(HTTP.get("profile", :profile => profile))
     end
 
     def to_s
       hash = instance_hash
-      max_length = hash.keys.map { |k| k[1..-1].length }.max
+      max_length = hash.keys.map { |k| k.length }.max
 
       hash.map { |attr, value|
-        attr = attr[1..-1].to_sym
+        attr = attr.to_sym
 
         if attr == :first_login
           value = Time.at(value.to_i).strftime("%Y-%m-%d %H:%M")
         end
 
-        "#{attr.to_s.ljust(max_length+1)}#{value}"
+        post = ":"
+        attr = human_readable(attr) + post
+
+        "#{attr.to_s.ljust(max_length+post.length+1)}#{value}"
       }.join("\n")
     end
 
     private
 
     def instance_hash
-      instance_variables.reduce({}) do |hash, ivar|
-        hash.merge({ivar.to_sym => instance_variable_get(ivar)})
+      members.reduce({}) do |hash, ivar|
+        hash.merge({ivar.to_sym => self[ivar]})
       end
+    end
+
+    def human_readable(key)
+      key.to_s.gsub('_', ' ').split(/(\W)/).map(&:capitalize).join
     end
   end
 
