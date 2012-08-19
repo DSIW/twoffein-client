@@ -1,80 +1,84 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
-require 'methadone'
+#require 'methadone'
+require 'thor'
 require 'twoffein-client'
 
-class App
-  include Methadone::Main
-  include Methadone::CLILogging
-  include Twoffein
+module Twoffein
+  class CLI < Thor
+    #include Methadone::Main
+    #include Methadone::CLILogging
+    include Twoffein
 
-  main do |receiver|
-    # TODO
-    if options["grep"]
-      puts "Drink  (Key)"
-      puts Drink.search(/#{options["grep-drinks"]}/i)
-      puts Profile.search(/#{options["grep-drinks"]}/i)
+    #class_option :default => :help
+
+    map "-p" => :profile
+    desc "profile [PROFILE]", "List the profile, which you have chosen by PROFILE"
+    #method_option :grep, :type => :string, :aliases => "-g" # TODO
+    def profile(profile=nil)
+      #if options[:grep]
+        #puts Profiles.search(/#{options["grep"]}/i)
+      #else
+        puts Profile.get profile
+      #end
     end
 
-    if options["tweet"]
-      tweet = Tweet.new(options["tweet"], receiver)
-      info = tweet.publish
-      p tweet
-      puts 'Info: ' + info[:info]
-      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+    map "-d" => :drinks
+    desc "drinks", "List all drinks"
+    method_option :grep, :type => :string, :aliases => "-g"
+    def drinks(profile=nil)
+      if options[:grep]
+        puts Drinks.search(/#{options["grep"]}/i)
+      else
+        #puts Util.format('Drink') + 'Key'
+        puts "Drink  (Key)"
+        puts Drinks.new
+      end
     end
 
-    if options["cookie"]
+    map "-t" => :tweet
+    desc "tweet DRINK", "Tweet your drinking drink"
+    method_option :with, :type => :string, :aliases => "-w"
+    def tweet(drink)
+      tweet = Tweet.new(drink, options[:with])
+      puts tweet.to_s
+      begin
+        info = tweet.publish
+        puts 'Info: ' + info[:info]
+        puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+      rescue Twoffein::Error => e
+        puts e.message
+      end
+    end
+
+    map "-c" => :cookie
+    desc "cookie RECEIVER", "Give cookie to RECEIVER"
+    def cookie(receiver)
       cookie = Cookie.new(receiver)
-      info = cookie.send
-      p cookie
-      puts 'Info: ' + info[:info]
-      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+      begin
+        info = cookie.send
+        puts 'Info: ' + info[:info]
+      rescue Twoffein::Error => e
+        puts e.message
+      end
     end
 
-    if options["list-profile"]
-      puts Profile.get
+    map "-v" => :version, "--version" => :version
+    desc "version", "Print version"
+    def version
+      puts "version #{Client::VERSION}"
     end
 
-    if options["list-drinks"]
-      #puts Util.format('Drink') + 'Key'
-      puts "Drink  (Key)"
-      puts Drinks.new
-    end
+    #def help
+      #desc = <<-EODESC
+#Client for API twoffein.de
+#API in version 0.1
+      #EODESC
+      ##description desc.chomp
+      #puts "HELP"
+    #end
   end
-
-  DESC = <<-EODESC
-Client for API twoffein.de
-API in version 0.1
-  EODESC
-  description DESC.chomp
-
-  #
-  # Accept flags via:
-  on("-t","--tweet DRINK","Tweet your drinking drink")
-  on("-c","--cookie","Send a cookie to your Receiver")
-  #on("-r","--recv RECEIVER","Receiver of a tweet or cookie")
-  # options[flag] will contain VAL
-  #
-  # Specify switches via:
-  on("-p","--list-profile","List your profile")
-  on("-d","--list-drinks","List all drinks")
-
-  on("-g","--grep PATTERN","Search all drinks")
-  #on("-gp","--grep-profiles PATTERN","Search all profiles")
-  #
-  # Or, just call OptionParser methods on opts
-  #
-  # Require an argument
-  # arg :some_arg 
-  #
-  # # Make an argument optional
-  arg :receiver, :optional
-
-  version Twoffein::Client::VERSION
-
-  use_log_level_option
-
-  go!
 end
+
+Twoffein::CLI.start
