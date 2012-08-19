@@ -217,23 +217,24 @@ module Twoffein
 
   class Tweet
     attr_accessor :drink,
-      :with_screen_name
+      :target_screen_name
 
-    def initialize drink_key, with_screen_name=nil
+    def initialize drink_key, target_screen_name=nil
       @drink = drink_key
-      @with_screen_name = with_screen_name
+      @target_screen_name = target_screen_name
     end
 
     def post
-      info = HTTP.post("tweet", :drink => @drink, :with_screen_name => @with_screen_name)
+      info = HTTP.post("tweet", :drink => @drink, :target_screen_name => @target_screen_name)
       raise Error.new(info[:code], info[:error]) if info.has_key? :error
       info
     end
     alias publish post
 
     def to_s
-      s = "Ich trinke gerade #{@drink}"
-      s << " mit #{@with_screen_name}" if @with_screen_name
+      s = "Ich trinke gerade #{Drinks[@drink].name}"
+      s << " mit #{@target_screen_name}" if @target_screen_name
+      s << "."
     end
   end
 
