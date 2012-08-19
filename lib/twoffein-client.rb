@@ -114,37 +114,51 @@ module Twoffein
   class Drinks
     attr_reader :all
 
-    def initialize
+    def initialize(subset=nil)
+      unless subset
       @all ||= Drink.get("list")
-      @all.map! { |drink| Drink.new(drink[:drink], drink[:key], drink[:brand]) }
+        return @all.map! { |drink| Drink.new(drink[:drink], drink[:key], drink[:brand]) }
     end
 
-    def self.all
-      Drinks.new.all
+      if subset.is_a? Array
+        @all = subset
+      else
+        @all = [subset]
+      end
     end
 
-    def names;  all.map { |d| d.name  }; end
-    def keys;   all.map { |d| d.key   }; end
-    def brands; all.map { |d| d.brand }; end
+    class << self
+      def all;    new.all;                 end
+      def names;  all.map { |d| d.name  }; end
+      def keys;   all.map { |d| d.key   }; end
+      def brands; all.map { |d| d.brand }; end
+
+      def find(key)
+        all.each { |d| return d if d.key == key }
+        nil
+      end
+      alias :[] :find
+
+      def search search
+        selected = all.select { |drink| drink.to_s =~ search }
+        #all.grep(search) # TODO see :===
+        new(selected).to_s
+      end
+    end
+
+    def add(drink)
+      raise ArgumentError, "drink has to be of type Drink" unless drink.is_a? Drink
+      @all << drink
+    end
+    alias :<< :add
 
     def to_s
-      max_length = names.map{ |d| d.length }.max
+      max_length = self.class.names.map{ |d| d.length }.max
       @all.map do |d|
         name = d.name
         key = d.key
         "#{name.ljust(max_length+1)}(#{key})"
       end.join("\n")
-    end
-
-    def ===(drink) # TODO
-      to_s =~ drink if drink.is_a? Regexp
-      to_s == drink if drink.is_a? String
-      false
-    end
-
-    def self.search search
-      all.select { |drink| drink.to_s =~ search }
-      #all.grep(search) # TODO
     end
   end
 
