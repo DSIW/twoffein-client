@@ -48,14 +48,14 @@ module Twoffein
     end
 
     def self.request(verb, path, params={})
+      Util.compact! params
       case verb
       when :get
         res = fetch(create_url([verb, path].join('/'), PARAMS.merge(params)))
-        JSON.parse(res.body, :symbolize_names => true)
       when :post # TODO
         res = fetch(create_url([:post, path].join('/'), PARAMS.merge(params)))
-        JSON.parse(res.body, :symbolize_names => true)
       end
+      JSON.parse(res.body, :symbolize_names => true)
     end
 
     def self.post_data(path, data, params={})
@@ -90,6 +90,10 @@ module Twoffein
   class Util
     def self.format(obj)
       sprintf("%-30.30s", obj)
+    end
+
+    def self.compact!(hash)
+      hash.reject! { |k,v| v.nil? || v.empty? }
     end
   end
 
@@ -183,18 +187,21 @@ module Twoffein
       @screen_name               = hash[:screen_name]
     end
 
-    def self.get
-      Profile.new(HTTP.get "profile")
+    def self.get(profile="")
+      Profile.new(HTTP.get "profile", :profile => profile)
     end
 
     def to_s
       hash = instance_hash
       max_length = hash.keys.map { |k| k[1..-1].length }.max
+
       hash.map { |attr, value|
-        attr = attr[1..-1]
+        attr = attr[1..-1].to_sym
+
         if attr == :first_login
           value = Time.at(value.to_i).strftime("%Y-%m-%d %H:%M")
         end
+
         "#{attr.to_s.ljust(max_length+1)}#{value}"
       }.join("\n")
     end
