@@ -120,9 +120,9 @@ module Twoffein
 
     def initialize(subset=nil)
       unless subset
-      @all ||= Drink.get("list")
+        @all ||= Drink.get("list")
         return @all.map! { |drink| Drink.new(drink[:drink], drink[:key], drink[:brand]) }
-    end
+      end
 
       if subset.is_a? Array
         @all = subset
