@@ -1,6 +1,5 @@
 # Twoffein-Client
-Client-Version: 0.0.1
-API-Version:    0.2
+Client-Version: 0.0.1 | API-Version:    0.2
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
