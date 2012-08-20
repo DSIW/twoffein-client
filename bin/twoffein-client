@@ -1,84 +1,84 @@
 #!/usr/bin/env ruby
 
-require 'optparse'
-#require 'methadone'
-require 'thor'
 require 'twoffein-client'
+require 'gli'
 
-module Twoffein
-  class CLI < Thor
-    #include Methadone::Main
-    #include Methadone::CLILogging
-    include Twoffein
+include Twoffein
+include GLI::App
 
-    #class_option :default => :help
+DEBUG = $DEBUG || true
 
-    map "-p" => :profile
-    desc "profile [PROFILE]", "List the profile, which you have chosen by PROFILE"
-    #method_option :grep, :type => :string, :aliases => "-g" # TODO
-    def profile(profile=nil)
-      #if options[:grep]
-        #puts Profiles.search(/#{options["grep"]}/i)
-      #else
-        puts Profile.get profile
-      #end
-    end
+program_desc "Client for API #{Server::VERSION} twoffein.de"
 
-    map "-d" => :drinks
-    desc "drinks", "List all drinks"
-    method_option :grep, :type => :string, :aliases => "-g"
-    def drinks(profile=nil)
-      if options[:grep]
-        puts Drinks.search(/#{options["grep"]}/i)
-      else
-        #puts Util.format('Drink') + 'Key'
-        puts "Drink  (Key)"
-        puts Drinks.new
-      end
-    end
+desc "Show version"
+version Client::VERSION
 
-    map "-t" => :tweet
-    desc "tweet DRINK", "Tweet your drinking drink"
-    method_option :with, :type => :string, :aliases => "-w"
-    def tweet(drink)
-      tweet = Tweet.new(drink, options[:with])
-      puts tweet.to_s
-      begin
-        info = tweet.publish
-        puts 'Info: ' + info[:info]
-        puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
-      rescue Twoffein::Error => e
-        puts e.message
-      end
-    end
+desc 'List the profile, which you have chosen by PROFILE'
+arg_name 'Name of profile which will be shown'
+command :profile do |c|
+  #c.desc "Grep all profiles"
+  #c.flag :grep
 
-    map "-c" => :cookie
-    desc "cookie RECEIVER", "Give cookie to RECEIVER"
-    def cookie(receiver)
-      cookie = Cookie.new(receiver)
-      begin
-        info = cookie.send
-        puts 'Info: ' + info[:info]
-      rescue Twoffein::Error => e
-        puts e.message
-      end
-    end
-
-    map "-v" => :version, "--version" => :version
-    desc "version", "Print version"
-    def version
-      puts "version #{Client::VERSION}"
-    end
-
-    #def help
-      #desc = <<-EODESC
-#Client for API twoffein.de
-#API in version 0.1
-      #EODESC
-      ##description desc.chomp
-      #puts "HELP"
+  c.action do |global_options,options,args|
+    profile = args.first
+    #if options[:grep]
+    #puts Profiles.search(/#{options["grep"]}/i)
+    #else
+    puts Profile.get profile
     #end
   end
 end
 
-Twoffein::CLI.start
+desc "List all drinks"
+arg_name "Describe arguments to drinks here"
+command :drinks do |c|
+  c.desc "Grep all drinks"
+  c.flag :grep
+
+  c.action do |global_options,options,args|
+    if options[:grep]
+      puts Drinks.search(/#{options[:grep]}/i)
+    else
+      #puts Util.format('Drink') + 'Key'
+      puts "Drink  (Key)"
+      puts Drinks.new
+    end
+  end
+end
+
+desc 'Tweet your drinking drink'
+arg_name 'key_of_drink (see command "drinks")'
+command :tweet do |c|
+  c.desc "Drink with somebody"
+  c.flag :with
+
+  c.action do |global_options,options,args|
+    help_now!('drink is required') if args.empty?
+    drink = args.first
+    tweet = Tweet.new(drink, options[:with])
+    puts tweet.to_s
+    begin
+      info = tweet.publish unless DEBUG
+      puts 'Info: ' + info[:info]
+      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+    rescue Twoffein::Error => e
+      puts e.message
+    end
+  end
+end
+
+desc 'Give cookie to RECEIVER'
+arg_name 'Receiver receives your cookie'
+command :cookie do |c|
+  c.action do |global_options,options,args|
+    receiver = args.first
+    begin
+      info = cookie.send unless DEBUG
+      puts 'Info: ' + info[:info]
+    rescue Twoffein::Error => e
+      puts e.message
+    end
+  end
+end
+
+exit run(ARGV)
