@@ -2,8 +2,8 @@ require 'json'
 require 'net/http'
 require 'uri'
 
-require_relative "http"
 require_relative "util"
+require_relative "constants"
 
 module Twoffein
   class HTTP
