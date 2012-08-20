@@ -46,21 +46,21 @@ command :drinks do |c|
   end
 end
 
-desc 'Tweet your drinking drink'
+desc 'Tweet your drinking DRINK'
 arg_name 'key_of_drink (see command "drinks")'
 command :tweet do |c|
   c.desc "Drink with somebody"
   c.flag :with
 
   c.action do |global_options,options,args|
-    help_now!('drink is required') if args.empty?
+    help_now!('DRINK is required') if args.empty?
     drink = args.first
     tweet = Tweet.new(drink, options[:with])
     puts tweet.to_s
     begin
       info = tweet.publish unless DEBUG
-      puts 'Info: ' + info[:info]
-      puts 'Drinks today: ' + info[:tweets].to_s unless info[:tweets].nil?
+      puts 'Info: ' + info[:info] unless info.nil?
+      puts 'Drinks today: ' + info[:tweets].to_s if info && !info[:tweets].nil?
     rescue Twoffein::Error => e
       puts e.message
     end
@@ -71,10 +71,12 @@ desc 'Give cookie to RECEIVER'
 arg_name 'Receiver receives your cookie'
 command :cookie do |c|
   c.action do |global_options,options,args|
+    help_now!('RECEIVER is required') if args.empty?
     receiver = args.first
+    cookie = Cookie.new(receiver)
     begin
       info = cookie.send unless DEBUG
-      puts 'Info: ' + info[:info]
+      puts 'Info: ' + info[:info] unless info.nil?
     rescue Twoffein::Error => e
       puts e.message
     end
