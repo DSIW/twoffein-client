@@ -44,6 +44,143 @@ COMMANDS
 
 ```
 
+## Examples
+
+
+**Input:**
+    twoffein-client drinks
+
+**Output:**
+```
+Drink  (Key)
+Kaffee                (kaffee)
+Milchkaffee           (milchkaffee)
+Eiskaffee             (eiskaffee)
+Energy Drink          (energiedrink)
+Cola                  (cola)
+Cola Light            (colalight)
+Cola Zero             (colazero)
+Cola-Mix              (colamix)
+Cola-Mix Light        (colamixlight)
+Cola-Mix Zero         (colamixzero)
+Bubble Tea            (bubbletea)
+Cherry Cola           (cherrycola)
+Vanilla Cola          (vanillacola)
+Caffé Latte           (cafelatte)
+Caffé au Lait         (cafeaulait)
+Latte Macchiato       (lattemacchiato)
+Espresso Macciato     (espressomacciato)
+Espresso con Panne    (espressoconpanne)
+Flat White            (flatwhite)
+Caffé Breve           (caffebreve)
+Caffé Mocha           (caffemocha)
+Americano             (americano)
+Melange               (melange)
+Red Eye               (redeye)
+Tee                   (tee)
+Eistee                (eistee)
+Kakao                 (kakao)
+Mate                  (mate)
+Espresso              (espresso)
+Cappuccino            (cappuccino)
+Vannillochino         (vannillochino)
+Instantkaffee         (instantkaffee)
+Mokka                 (mokka)
+Chai-Latte            (chailatte)
+Grünen Tee            (guenertee)
+Schwarztee            (schwarztee)
+1337MATE              (leetmate)
+Club-Mate             (clubmate)
+Club-Mate Cola        (clubmatecola)
+ICE-Tea KRAFTSTOFF    (kraftstoff)
+Premium-Cola          (premiumcola)
+Dr Pepper             (drpepper)
+Vita Cola             (vitacola)
+Vita Cola Mix         (vitacolamix)
+Vita Cola Pur         (vitacolapur)
+Schokocino            (schokocino)
+afri cola             (africola)
+afri sugarfree        (afrisugarfree)
+afri power            (afripower)
+fritz-kola            (fritzkola)
+fritz-kola stevia     (fritzkolastevia)
+fritz-kola zuckerfrei (fritzkolazuckerfrei)
+mischmasch            (mischmasch)
+Haji Cola             (hajicola)
+KILLERFISH Hot Energy (killerfishhotenergy)
+Café Frappé           (cafefrappe)
+Energy Shot           (energyshot)
+Wasser                (wasser)
+Mineralwasser         (mineralwasser)
+Apfelsaft             (apfelsaft)
+Orangensaft           (orangensaft)
+Milch                 (milch)
+Sojamilch             (sojamilch)
+Orangenlimonade       (orangenlimonade)
+Zitronenlimonade      (zitronenlimonade)
+Kräuterlimonade       (kraeuterlimonade)
+Apfelsaftschorle      (apfelsaftschorle)
+Ginger Ale            (gingerale)
+Tonic Water           (tonicwater)
+Bitter Lemon          (bitterlemon)
+Bananensaft           (bananensaft)
+Traubensaft           (traubensaft)
+Milchshake            (milchshake)
+Joghurtdrink          (joghurtdrink)
+Smoothie              (smoothie)
+Espresso Doppio       (espressodoppio)
+Fassbrause            (fassbrause)
+Ayran                 (ayran)
+Flora Power           (florapower)
+VOLT Cola             (voltcola)
+COFAIN 699            (cofain669)
+Erdbeersaft           (erdbeersaft)
+KiBa                  (kiba)
+Müllermilch           (muellermilch)
+```
+
+**Input:**
+    twoffein-client drinks --grep club
+
+**Output:**
+```
+Club-Mate             (clubmate)
+Club-Mate Cola        (clubmatecola)
+```
+
+**Input:**
+    twoffein-client profile
+
+**Output:**
+```
+Quest:                     Blitzlicht
+Drink:                     Club-Mate
+Rank:                      75
+Rank Title:                Kaffeekännchen
+Drunken:                   12
+Bluttwoffeinkonzentration: 1%
+First Login:               2012-07-08 13:36
+Screen Name:               DSIW
+```
+
+**Input:**
+    twoffein-client cookie DSIW
+
+**Output:**
+```
+Lol.
+```
+
+**Input:**
+    twoffein-client tweet clubmate
+
+**Output:**
+```
+Ich trinke gerade Club-Mate.
+Info: Youre Tweet has been tweeted. Thanks.
+Drinks today: 1
+```
+
 ## Contributing
 
 1. Fork it

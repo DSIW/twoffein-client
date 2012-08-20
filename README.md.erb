@@ -25,6 +25,25 @@ Or install it yourself as:
 <%= %x[bundle exec bin/twoffein-client --help] %>
 ```
 
+## Examples
+<%
+    def example(command);
+        input = "**Input:**\n    #{command.gsub("bundle exec bin/",'')}"
+        output = "**Output:**\n```\n#{%x[#{command}]}```"
+        "#{input}\n\n#{output}";
+    end
+%>
+
+<%= example "bundle exec bin/twoffein-client drinks" %>
+
+<%= example "bundle exec bin/twoffein-client drinks --grep club" %>
+
+<%= example "bundle exec bin/twoffein-client profile" %>
+
+<%= example "bundle exec bin/twoffein-client cookie DSIW" %>
+
+<%= example "bundle exec bin/twoffein-client tweet clubmate" %>
+
 ## Contributing
 
 1. Fork it
