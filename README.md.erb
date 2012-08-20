@@ -27,14 +27,15 @@ Or install it yourself as:
 
 ## Examples
 <%
-    def example(command);
+    def example(title, command);
+        title = "### #{title}"
         input = "**Input:**\n\n    #{command.gsub("bundle exec bin/",'')}"
         output = "**Output:**\n```\n#{%x[#{command}]}```"
-        "#{input}\n\n#{output}";
+        [title, input, output].join("\n\n")
     end
 %>
 
-<%= example "bundle exec bin/twoffein-client drinks" %>
+<%= example "Drinks", "bundle exec bin/twoffein-client drinks" %>
 
 <%= example "bundle exec bin/twoffein-client drinks --grep club" %>
 

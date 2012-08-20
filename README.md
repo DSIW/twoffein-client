@@ -46,6 +46,7 @@ COMMANDS
 
 ## Examples
 
+### Drinks
 
 **Input:**
 
@@ -140,6 +141,8 @@ KiBa                  (kiba)
 Müllermilch           (muellermilch)
 ```
 
+### Drinks (filtered)
+
 **Input:**
 
     twoffein-client drinks --grep club
@@ -149,6 +152,8 @@ Müllermilch           (muellermilch)
 Club-Mate             (clubmate)
 Club-Mate Cola        (clubmatecola)
 ```
+
+### Profile
 
 **Input:**
 
@@ -166,6 +171,8 @@ First Login:               2012-07-08 13:36
 Screen Name:               DSIW
 ```
 
+### Cookie
+
 **Input:**
 
     twoffein-client cookie DSIW
@@ -174,6 +181,8 @@ Screen Name:               DSIW
 ```
 Lol.
 ```
+
+### Tweet
 
 **Input:**
 
