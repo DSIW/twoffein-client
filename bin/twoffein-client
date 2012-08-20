@@ -6,7 +6,7 @@ require 'gli'
 include Twoffein
 include GLI::App
 
-DEBUG = $DEBUG || true
+DEBUG = $DEBUG
 
 program_desc "Client for API #{Server::VERSION} twoffein.de"
 
