@@ -48,6 +48,7 @@ COMMANDS
 
 
 **Input:**
+
     twoffein-client drinks
 
 **Output:**
@@ -140,6 +141,7 @@ Müllermilch           (muellermilch)
 ```
 
 **Input:**
+
     twoffein-client drinks --grep club
 
 **Output:**
@@ -149,6 +151,7 @@ Club-Mate Cola        (clubmatecola)
 ```
 
 **Input:**
+
     twoffein-client profile
 
 **Output:**
@@ -164,6 +167,7 @@ Screen Name:               DSIW
 ```
 
 **Input:**
+
     twoffein-client cookie DSIW
 
 **Output:**
@@ -172,6 +176,7 @@ Lol.
 ```
 
 **Input:**
+
     twoffein-client tweet clubmate
 
 **Output:**

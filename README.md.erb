@@ -28,7 +28,7 @@ Or install it yourself as:
 ## Examples
 <%
     def example(command);
-        input = "**Input:**\n    #{command.gsub("bundle exec bin/",'')}"
+        input = "**Input:**\n\n    #{command.gsub("bundle exec bin/",'')}"
         output = "**Output:**\n```\n#{%x[#{command}]}```"
         "#{input}\n\n#{output}";
     end
