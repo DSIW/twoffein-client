@@ -1,5 +1,5 @@
 # Twoffein-Client
-Client-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Client::VERSION %> | API-Version:    <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Server::VERSION %>
+Client-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Client::VERSION %> | API-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Server::VERSION %>
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
@@ -37,13 +37,13 @@ Or install it yourself as:
 
 <%= example "Drinks", "bundle exec bin/twoffein-client drinks" %>
 
-<%= example "bundle exec bin/twoffein-client drinks --grep club" %>
+<%= example "Drinks (filtered)", "bundle exec bin/twoffein-client drinks --grep club" %>
 
-<%= example "bundle exec bin/twoffein-client profile" %>
+<%= example "Profile", "bundle exec bin/twoffein-client profile" %>
 
-<%= example "bundle exec bin/twoffein-client cookie DSIW" %>
+<%= example "Cookie", "bundle exec bin/twoffein-client cookie DSIW" %>
 
-<%= example "bundle exec bin/twoffein-client tweet clubmate" %>
+<%= example "Tweet", "bundle exec bin/twoffein-client tweet clubmate" %>
 
 ## Contributing
 
