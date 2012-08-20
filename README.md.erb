@@ -1,6 +1,6 @@
 # Twoffein-Client
-Client-Version: 0.0.1
-API-Version:    0.2
+Client-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Client::VERSION %>
+API-Version:    <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Server::VERSION %>
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
@@ -23,26 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-NAME
-    twoffein-client - Client for API 0.2 twoffein.de
-
-SYNOPSIS
-    twoffein-client [global options] command [command options] [arguments...]
-
-VERSION
-    0.0.1
-
-GLOBAL OPTIONS
-    --help    - Show this message
-    --version - Show version
-
-COMMANDS
-    cookie  - Give cookie to RECEIVER
-    drinks  - List all drinks
-    help    - Shows a list of commands or help for one command
-    profile - List the profile, which you have chosen by PROFILE
-    tweet   - Tweet your drinking DRINK
-
+<%= %x[bundle exec bin/twoffein-client --help] %>
 ```
 
 ## Contributing
