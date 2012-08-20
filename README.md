@@ -182,6 +182,8 @@ Screen Name:               DSIW
 Lol.
 ```
 
+_You can't send yourself a cookie._
+
 ### Tweet
 
 **Input:**
