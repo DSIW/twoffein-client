@@ -4,7 +4,7 @@ module Twoffein
   class Cookie
     attr_accessor :target_screen_name
 
-    def initialize target_screen_name=nil
+    def initialize target_screen_name
       @target_screen_name = target_screen_name
     end
 
