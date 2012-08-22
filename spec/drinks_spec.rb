@@ -87,7 +87,7 @@ describe Drinks do
     VCR.use_cassette("drinks") do
       kaffee   = Drink.new("Kaffee", "kaffee", false)
       clubmate = Drink.new("Club-Mate")
-      drinks = Drinks.new(kaffee)
+      drinks   = Drinks.new(kaffee)
       drinks.all.should include kaffee
       drinks = Drinks.new([kaffee,clubmate])
       drinks.all.should include kaffee, clubmate
@@ -96,9 +96,9 @@ describe Drinks do
 
   it "#init without subset" do
     VCR.use_cassette("drinks") do
-      drinks   = Drinks.new
+      drinks = Drinks.new
       drinks.length.should be > 10
-      kaffee   = Drink.new("Kaffee", "kaffee", false)
+      kaffee = Drink.new("Kaffee", "kaffee", false)
       drinks.all.should include kaffee
     end
   end
@@ -107,7 +107,7 @@ describe Drinks do
     VCR.use_cassette("drinks") do
       kaffee   = Drink.new("Kaffee", "kaffee", false)
       clubmate = Drink.new("Club-Mate")
-      drinks = Drinks.new([kaffee,clubmate])
+      drinks   = Drinks.new([kaffee,clubmate])
       drinks.length.should be 2
     end
   end
@@ -116,27 +116,39 @@ describe Drinks do
     VCR.use_cassette("drinks") do
       kaffee   = Drink.new("Kaffee", "kaffee", false)
       clubmate = Drink.new("Club-Mate")
-      drinks = Drinks.new([kaffee])
+      drinks   = Drinks.new(kaffee)
       drinks.add(clubmate)
+      drinks.all.should include kaffee, clubmate
+    end
+  end
+
+  it "#<<" do
+    VCR.use_cassette("drinks") do
+      kaffee   = Drink.new("Kaffee", "kaffee", false)
+      clubmate = Drink.new("Club-Mate")
+      drinks   = Drinks.new(kaffee)
+      drinks << clubmate
       drinks.all.should include kaffee, clubmate
     end
   end
 
   it "#to_s" do
     VCR.use_cassette("drinks") do
-      kaffee     = Drink.new("Kaffee", "kaffee", false)
-      clubmate   = Drink.new("Club-Mate", "clubmate")
-      test       = Drink.new("testtetetetsetestset", "test")
-      drinks     = Drinks.new([kaffee,clubmate,test])
+      kaffee   = Drink.new("Kaffee", "kaffee", false)
+      clubmate = Drink.new("Club-Mate", "clubmate")
+      test     = Drink.new("testtetetetsetestset", "test")
+      drinks   = Drinks.new([kaffee,clubmate,test])
       drinks.length.should be 3
 
-      header     = "Drink                 (key)"
-      kaffee_s   = "Kaffee                (kaffee)"
-      clubmate_s = "Club-Mate             (clubmate)"
-      test_s     = "testtetetetsetestset  (test)"
-      output = [header, kaffee_s, clubmate_s, test_s].join("\n")
+      output = <<-EOF
+Drink                 (key)
+--------------------------------
+Kaffee                (kaffee)
+Club-Mate             (clubmate)
+testtetetetsetestset  (test)
+      EOF
 
-      drinks.to_s.should eq output
+      drinks.to_s.should eq output.chomp
     end
   end
 end

@@ -43,7 +43,7 @@ module Twoffein
       def search search
         search = /#{search}/i unless search.is_a? Regexp
         selected = all.select { |drink| drink.to_s =~ search }
-        new(selected).all
+        new(selected)
         #all.grep(search) # TODO see :===
       end
     end
@@ -52,21 +52,45 @@ module Twoffein
       raise ArgumentError, "drink has to be of type Drink" unless drink.is_a? Drink
       @all << drink
     end
-    alias :<< :add
-
-    def length
-      @all.length
-    end
 
     def to_s
-      max_length = @all.map { |d| d.name.length }.max
-      header = "#{"Drink".ljust(max_length)}  (key)"
+      name_max_length = @all.map { |d| d.name.length }.max
+      pre_key  = "  ("
+      post_key = ")"
+
+      # Calc max length of line
+      length = lambda do |drink|
+        key = drink.key
+        [pre_key, key, post_key].map { |cont|
+          cont.length
+        }.push(name_max_length).reduce(&:+)
+      end
+      max_line = @all.map { |d| length.call(d) }.max
+
+      # Header
+      header = ["Drink".ljust(name_max_length), pre_key, "key", post_key].join
+      line = "-"*max_line
+
+      # Drinks
       drinks = @all.map { |d|
         name = d.name
         key = d.key
-        "#{name.ljust(max_length)}  (#{key})"
+        [name.ljust(name_max_length), pre_key, key, post_key].join
       }.join("\n")
-      [header, drinks].join("\n")
+
+      # All
+      [header, line, drinks].join("\n")
+    end
+
+    private
+
+    # Delegates method call to @all if it has defined this method
+    def method_missing(method, *args, &block)
+      if @all.respond_to? method
+        @all.send(method, *args, &block)
+      else
+        super(method, *args, &block)
+      end
     end
   end
 end
