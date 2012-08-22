@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=UserDoesNotExistTest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:19:39 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"bigmacintosh","error":"Profile not found."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:19:40 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:19:51 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"joe","error":"Lol."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:19:52 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:22:33 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"celestia","info":"Thanks for the cookie, nomnomnom!"}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:22:35 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:24:00 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"scootaloo","error":"Sorry, one cooke\/user\/day."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:24:00 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:24:07 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"scootaloo","error":"Sorry, one cooke\/user\/day."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:24:08 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:24:18 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"scootaloo","error":"Sorry, one cooke\/user\/day."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:24:18 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/cookie/?api_key=1CBA7V9XFKHJ&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 12:25:51 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"scootaloo","error":"Sorry, one cooke\/user\/day."}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 12:25:52 GMT
+recorded_with: VCR 2.2.4

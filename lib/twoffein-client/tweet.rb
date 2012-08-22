@@ -8,13 +8,16 @@ module Twoffein
       :target_screen_name
 
     def initialize drink_key, target_screen_name=nil
-      @drink = drink_key
+      @drink = drink_key.to_sym
       @target_screen_name = target_screen_name
     end
 
     def post
-      info = HTTP.post("tweet", :drink => @drink, :target_screen_name => @target_screen_name)
-      raise Error.new(info[:code], info[:error]) if info.has_key? :error
+      info = HTTP.post("tweet", {
+        :drink => @drink,
+        :target_screen_name => @target_screen_name
+      })
+      raise Server::Error.new(info[:code], info[:error]) if info.has_key? :error
       info
     end
     alias publish post

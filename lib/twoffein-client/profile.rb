@@ -32,13 +32,13 @@ module Twoffein
         attr = attr.to_sym
 
         if attr == :first_login
-          value = Time.at(value.to_i).strftime("%Y-%m-%d %H:%M")
+          value = human_readable_time(value)
         end
 
-        post = ":"
-        attr = human_readable(attr) + post
+        postfix = ":"
+        attr = human_readable_key(attr) + postfix
 
-        "#{attr.to_s.ljust(max_length+post.length+1)}#{value}"
+        "#{attr.to_s.ljust(max_length+postfix.length+1)}#{value}"
       }.join("\n")
     end
 
@@ -50,8 +50,12 @@ module Twoffein
       end
     end
 
-    def human_readable(key)
+    def human_readable_key(key)
       key.to_s.gsub('_', ' ').split(/(\W)/).map(&:capitalize).join
+    end
+
+    def human_readable_time(value)
+      Time.at(value.to_i).strftime("%Y-%m-%d %H:%M")
     end
   end
 end

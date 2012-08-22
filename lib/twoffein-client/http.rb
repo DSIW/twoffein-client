@@ -1,6 +1,7 @@
 require 'json'
 require 'net/http'
 require 'uri'
+#require 'rexml/document'
 
 require_relative "util"
 require_relative "constants"
@@ -9,7 +10,7 @@ module Twoffein
   class HTTP
     def self.create_url(path, params={})
       query = URI.encode_www_form(params)
-      # TODO: Change API-URI: Add controller in MVC
+      # TODO: Change API-URI: Add controller in MVC –> rest_client (https://github.com/adamwiggins/rest-client)
       URI.join(BASE_URL, path+'/').to_s + '?' + query
     end
 
@@ -36,6 +37,14 @@ module Twoffein
       case verb
       when :get
         res = fetch(create_url([verb, path].join('/'), PARAMS.merge(params)))
+        case content_type(res)
+        when /xml/
+          puts "XML isn't supported."
+          exit 1
+          #xml = REXML::Document.new(res.body)
+        when /json/
+          return JSON.parse(res.body, :symbolize_names => true)
+        end
       when :post # TODO
         res = fetch(create_url([:post, path].join('/'), PARAMS.merge(params)))
       end
@@ -68,6 +77,20 @@ module Twoffein
 
     def self.post(path, params={})
       request(:post, path, params)
+    end
+
+    private
+
+    def self.content_type(res)
+      res["Content-Type"].split(';').first
+    end
+
+    def self.xml?(res)
+      content_type(res) == "application/xml"
+    end
+
+    def self.json?(res)
+      content_type(res) == "application/json"
     end
   end
 end

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/tweet/?api_key=1CBA7V9XFKHJ&drink=clubmate&screen_name=DSIW&target_screen_name=UserDoesNotExistTest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 13:46:08 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"luna","info":"Youre Tweet has been tweeted. Thanks.","tweets":1}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 13:46:08 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/tweet/?api_key=1CBA7V9XFKHJ&drink=clubmate&screen_name=DSIW&target_screen_name=BakeRolls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 13:51:28 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"pinkiepie","error":"You cant drink more than one drink in
+        15 minutes.","sleep":9}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 13:51:28 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/post/tweet/?api_key=1CBA7V9XFKHJ&drink=clubmate&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 14:07:21 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":"luna","info":"Youre Tweet has been tweeted. Thanks.","tweets":2}'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 14:07:22 GMT
+recorded_with: VCR 2.2.4

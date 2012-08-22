@@ -8,7 +8,7 @@ module Twoffein
       end
 
       def to_s
-        "#@type (#@message)"
+        @type.to_s
       end
     end
   end

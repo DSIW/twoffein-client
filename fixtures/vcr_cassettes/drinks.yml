@@ -1,0 +1,461 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Aug 2012 16:36:52 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[{"drink":"Kaffee","key":"kaffee","brand":"0"},{"drink":"Milchkaffee","key":"milchkaffee","brand":"0"},{"drink":"Eiskaffee","key":"eiskaffee","brand":"0"},{"drink":"Energy
+        Drink","key":"energiedrink","brand":"0"},{"drink":"Cola","key":"cola","brand":"0"},{"drink":"Cola
+        Light","key":"colalight","brand":"0"},{"drink":"Cola Zero","key":"colazero","brand":"0"},{"drink":"Cola-Mix","key":"colamix","brand":"0"},{"drink":"Cola-Mix
+        Light","key":"colamixlight","brand":"0"},{"drink":"Cola-Mix Zero","key":"colamixzero","brand":"0"},{"drink":"Bubble
+        Tea","key":"bubbletea","brand":"2"},{"drink":"Cherry Cola","key":"cherrycola","brand":"0"},{"drink":"Vanilla
+        Cola","key":"vanillacola","brand":"0"},{"drink":"Caff\u00e9 Latte","key":"cafelatte","brand":"0"},{"drink":"Caff\u00e9
+        au Lait","key":"cafeaulait","brand":"0"},{"drink":"Latte Macchiato","key":"lattemacchiato","brand":"0"},{"drink":"Espresso
+        Macciato","key":"espressomacciato","brand":"0"},{"drink":"Espresso con Panne","key":"espressoconpanne","brand":"0"},{"drink":"Flat
+        White","key":"flatwhite","brand":"0"},{"drink":"Caff\u00e9 Breve","key":"caffebreve","brand":"0"},{"drink":"Caff\u00e9
+        Mocha","key":"caffemocha","brand":"0"},{"drink":"Americano","key":"americano","brand":"0"},{"drink":"Melange","key":"melange","brand":"0"},{"drink":"Red
+        Eye","key":"redeye","brand":"0"},{"drink":"Tee","key":"tee","brand":"2"},{"drink":"Eistee","key":"eistee","brand":"0"},{"drink":"Kakao","key":"kakao","brand":"2"},{"drink":"Mate","key":"mate","brand":"0"},{"drink":"Espresso","key":"espresso","brand":"0"},{"drink":"Cappuccino","key":"cappuccino","brand":"0"},{"drink":"Vannillochino","key":"vannillochino","brand":"0"},{"drink":"Instantkaffee","key":"instantkaffee","brand":"0"},{"drink":"Mokka","key":"mokka","brand":"0"},{"drink":"Chai-Latte","key":"chailatte","brand":"0"},{"drink":"Gr\u00fcnen
+        Tee","key":"guenertee","brand":"0"},{"drink":"Schwarztee","key":"schwarztee","brand":"0"},{"drink":"1337MATE","key":"leetmate","brand":"1"},{"drink":"Club-Mate","key":"clubmate","brand":"1"},{"drink":"Club-Mate
+        Cola","key":"clubmatecola","brand":"1"},{"drink":"ICE-Tea KRAFTSTOFF","key":"kraftstoff","brand":"1"},{"drink":"Premium-Cola","key":"premiumcola","brand":"1"},{"drink":"Dr
+        Pepper","key":"drpepper","brand":"1"},{"drink":"Vita Cola","key":"vitacola","brand":"1"},{"drink":"Vita
+        Cola Mix","key":"vitacolamix","brand":"1"},{"drink":"Vita Cola Pur","key":"vitacolapur","brand":"1"},{"drink":"Schokocino","key":"schokocino","brand":"0"},{"drink":"afri
+        cola","key":"africola","brand":"1"},{"drink":"afri sugarfree","key":"afrisugarfree","brand":"1"},{"drink":"afri
+        power","key":"afripower","brand":"1"},{"drink":"fritz-kola","key":"fritzkola","brand":"1"},{"drink":"fritz-kola
+        stevia","key":"fritzkolastevia","brand":"1"},{"drink":"fritz-kola zuckerfrei","key":"fritzkolazuckerfrei","brand":"1"},{"drink":"mischmasch","key":"mischmasch","brand":"1"},{"drink":"Haji
+        Cola","key":"hajicola","brand":"1"},{"drink":"KILLERFISH Hot Energy","key":"killerfishhotenergy","brand":"1"},{"drink":"Caf\u00e9
+        Frapp\u00e9","key":"cafefrappe","brand":"0"},{"drink":"Energy Shot","key":"energyshot","brand":"0"},{"drink":"Wasser","key":"wasser","brand":"2"},{"drink":"Mineralwasser","key":"mineralwasser","brand":"2"},{"drink":"Apfelsaft","key":"apfelsaft","brand":"2"},{"drink":"Orangensaft","key":"orangensaft","brand":"2"},{"drink":"Milch","key":"milch","brand":"2"},{"drink":"Sojamilch","key":"sojamilch","brand":"2"},{"drink":"Orangenlimonade","key":"orangenlimonade","brand":"2"},{"drink":"Zitronenlimonade","key":"zitronenlimonade","brand":"2"},{"drink":"Kr\u00e4uterlimonade","key":"kraeuterlimonade","brand":"2"},{"drink":"Apfelsaftschorle","key":"apfelsaftschorle","brand":"2"},{"drink":"Ginger
+        Ale","key":"gingerale","brand":"2"},{"drink":"Tonic Water","key":"tonicwater","brand":"2"},{"drink":"Bitter
+        Lemon","key":"bitterlemon","brand":"2"},{"drink":"Bananensaft","key":"bananensaft","brand":"2"},{"drink":"Traubensaft","key":"traubensaft","brand":"2"},{"drink":"Milchshake","key":"milchshake","brand":"2"},{"drink":"Joghurtdrink","key":"joghurtdrink","brand":"2"},{"drink":"Smoothie","key":"smoothie","brand":"2"},{"drink":"Espresso
+        Doppio","key":"espressodoppio","brand":"0"},{"drink":"Fassbrause","key":"fassbrause","brand":"2"},{"drink":"Ayran","key":"ayran","brand":"2"},{"drink":"Flora
+        Power","key":"florapower","brand":"1"},{"drink":"VOLT Cola","key":"voltcola","brand":"1"},{"drink":"COFAIN
+        699","key":"cofain669","brand":"1"},{"drink":"Erdbeersaft","key":"erdbeersaft","brand":"2"},{"drink":"KiBa","key":"kiba","brand":"2"},{"drink":"M\u00fcllermilch","key":"muellermilch","brand":"1"}]'
+    http_version: 
+  recorded_at: Mon, 20 Aug 2012 16:36:54 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&encode=xml&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Aug 2012 16:51:24 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8"?>
+
+        <root><item><drink>Kaffee</drink><key>kaffee</key><brand>0</brand></item><item><drink>Milchkaffee</drink><key>milchkaffee</key><brand>0</brand></item><item><drink>Eiskaffee</drink><key>eiskaffee</key><brand>0</brand></item><item><drink>Energy
+        Drink</drink><key>energiedrink</key><brand>0</brand></item><item><drink>Cola</drink><key>cola</key><brand>0</brand></item><item><drink>Cola
+        Light</drink><key>colalight</key><brand>0</brand></item><item><drink>Cola
+        Zero</drink><key>colazero</key><brand>0</brand></item><item><drink>Cola-Mix</drink><key>colamix</key><brand>0</brand></item><item><drink>Cola-Mix
+        Light</drink><key>colamixlight</key><brand>0</brand></item><item><drink>Cola-Mix
+        Zero</drink><key>colamixzero</key><brand>0</brand></item><item><drink>Bubble
+        Tea</drink><key>bubbletea</key><brand>2</brand></item><item><drink>Cherry
+        Cola</drink><key>cherrycola</key><brand>0</brand></item><item><drink>Vanilla
+        Cola</drink><key>vanillacola</key><brand>0</brand></item><item><drink>Caff&#xE9;
+        Latte</drink><key>cafelatte</key><brand>0</brand></item><item><drink>Caff&#xE9;
+        au Lait</drink><key>cafeaulait</key><brand>0</brand></item><item><drink>Latte
+        Macchiato</drink><key>lattemacchiato</key><brand>0</brand></item><item><drink>Espresso
+        Macciato</drink><key>espressomacciato</key><brand>0</brand></item><item><drink>Espresso
+        con Panne</drink><key>espressoconpanne</key><brand>0</brand></item><item><drink>Flat
+        White</drink><key>flatwhite</key><brand>0</brand></item><item><drink>Caff&#xE9;
+        Breve</drink><key>caffebreve</key><brand>0</brand></item><item><drink>Caff&#xE9;
+        Mocha</drink><key>caffemocha</key><brand>0</brand></item><item><drink>Americano</drink><key>americano</key><brand>0</brand></item><item><drink>Melange</drink><key>melange</key><brand>0</brand></item><item><drink>Red
+        Eye</drink><key>redeye</key><brand>0</brand></item><item><drink>Tee</drink><key>tee</key><brand>2</brand></item><item><drink>Eistee</drink><key>eistee</key><brand>0</brand></item><item><drink>Kakao</drink><key>kakao</key><brand>2</brand></item><item><drink>Mate</drink><key>mate</key><brand>0</brand></item><item><drink>Espresso</drink><key>espresso</key><brand>0</brand></item><item><drink>Cappuccino</drink><key>cappuccino</key><brand>0</brand></item><item><drink>Vannillochino</drink><key>vannillochino</key><brand>0</brand></item><item><drink>Instantkaffee</drink><key>instantkaffee</key><brand>0</brand></item><item><drink>Mokka</drink><key>mokka</key><brand>0</brand></item><item><drink>Chai-Latte</drink><key>chailatte</key><brand>0</brand></item><item><drink>Gr&#xFC;nen
+        Tee</drink><key>guenertee</key><brand>0</brand></item><item><drink>Schwarztee</drink><key>schwarztee</key><brand>0</brand></item><item><drink>1337MATE</drink><key>leetmate</key><brand>1</brand></item><item><drink>Club-Mate</drink><key>clubmate</key><brand>1</brand></item><item><drink>Club-Mate
+        Cola</drink><key>clubmatecola</key><brand>1</brand></item><item><drink>ICE-Tea
+        KRAFTSTOFF</drink><key>kraftstoff</key><brand>1</brand></item><item><drink>Premium-Cola</drink><key>premiumcola</key><brand>1</brand></item><item><drink>Dr
+        Pepper</drink><key>drpepper</key><brand>1</brand></item><item><drink>Vita
+        Cola</drink><key>vitacola</key><brand>1</brand></item><item><drink>Vita Cola
+        Mix</drink><key>vitacolamix</key><brand>1</brand></item><item><drink>Vita
+        Cola Pur</drink><key>vitacolapur</key><brand>1</brand></item><item><drink>Schokocino</drink><key>schokocino</key><brand>0</brand></item><item><drink>afri
+        cola</drink><key>africola</key><brand>1</brand></item><item><drink>afri sugarfree</drink><key>afrisugarfree</key><brand>1</brand></item><item><drink>afri
+        power</drink><key>afripower</key><brand>1</brand></item><item><drink>fritz-kola</drink><key>fritzkola</key><brand>1</brand></item><item><drink>fritz-kola
+        stevia</drink><key>fritzkolastevia</key><brand>1</brand></item><item><drink>fritz-kola
+        zuckerfrei</drink><key>fritzkolazuckerfrei</key><brand>1</brand></item><item><drink>mischmasch</drink><key>mischmasch</key><brand>1</brand></item><item><drink>Haji
+        Cola</drink><key>hajicola</key><brand>1</brand></item><item><drink>KILLERFISH
+        Hot Energy</drink><key>killerfishhotenergy</key><brand>1</brand></item><item><drink>Caf&#xE9;
+        Frapp&#xE9;</drink><key>cafefrappe</key><brand>0</brand></item><item><drink>Energy
+        Shot</drink><key>energyshot</key><brand>0</brand></item><item><drink>Wasser</drink><key>wasser</key><brand>2</brand></item><item><drink>Mineralwasser</drink><key>mineralwasser</key><brand>2</brand></item><item><drink>Apfelsaft</drink><key>apfelsaft</key><brand>2</brand></item><item><drink>Orangensaft</drink><key>orangensaft</key><brand>2</brand></item><item><drink>Milch</drink><key>milch</key><brand>2</brand></item><item><drink>Sojamilch</drink><key>sojamilch</key><brand>2</brand></item><item><drink>Orangenlimonade</drink><key>orangenlimonade</key><brand>2</brand></item><item><drink>Zitronenlimonade</drink><key>zitronenlimonade</key><brand>2</brand></item><item><drink>Kr&#xE4;uterlimonade</drink><key>kraeuterlimonade</key><brand>2</brand></item><item><drink>Apfelsaftschorle</drink><key>apfelsaftschorle</key><brand>2</brand></item><item><drink>Ginger
+        Ale</drink><key>gingerale</key><brand>2</brand></item><item><drink>Tonic Water</drink><key>tonicwater</key><brand>2</brand></item><item><drink>Bitter
+        Lemon</drink><key>bitterlemon</key><brand>2</brand></item><item><drink>Bananensaft</drink><key>bananensaft</key><brand>2</brand></item><item><drink>Traubensaft</drink><key>traubensaft</key><brand>2</brand></item><item><drink>Milchshake</drink><key>milchshake</key><brand>2</brand></item><item><drink>Joghurtdrink</drink><key>joghurtdrink</key><brand>2</brand></item><item><drink>Smoothie</drink><key>smoothie</key><brand>2</brand></item><item><drink>Espresso
+        Doppio</drink><key>espressodoppio</key><brand>0</brand></item><item><drink>Fassbrause</drink><key>fassbrause</key><brand>2</brand></item><item><drink>Ayran</drink><key>ayran</key><brand>2</brand></item><item><drink>Flora
+        Power</drink><key>florapower</key><brand>1</brand></item><item><drink>VOLT
+        Cola</drink><key>voltcola</key><brand>1</brand></item><item><drink>COFAIN
+        699</drink><key>cofain669</key><brand>1</brand></item><item><drink>Erdbeersaft</drink><key>erdbeersaft</key><brand>2</brand></item><item><drink>KiBa</drink><key>kiba</key><brand>2</brand></item><item><drink>M&#xFC;llermilch</drink><key>muellermilch</key><brand>1</brand></item></root>
+
+'
+    http_version: 
+  recorded_at: Mon, 20 Aug 2012 16:51:26 GMT
+- request:
+    method: get
+    uri: http://twoffein.de/api/get/drinks/?api_key=1CBA7V9XFKHJ&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 20 Aug 2012 16:51:25 GMT
+      Server:
+      - Apache
+      Location:
+      - http://twoffein.com/api/get/drinks/?screen_name=DSIW&api_key=1CBA7V9XFKHJ
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '285'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: US-ASCII
+      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://twoffein.com/api/get/drinks/?screen_name=DSIW&amp;api_key=1CBA7V9XFKHJ">here</a>.</p>
+
+        </body></html>
+
+'
+    http_version: 
+  recorded_at: Mon, 20 Aug 2012 16:51:26 GMT
+- request:
+    method: get
+    uri: http://twoffein.de/api/get/drinks/?api_key=1CBA7V9XFKHJ&encode=xml&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 20 Aug 2012 17:15:46 GMT
+      Server:
+      - Apache
+      Location:
+      - http://twoffein.com/api/get/drinks/?screen_name=DSIW&api_key=1CBA7V9XFKHJ&encode=xml
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: US-ASCII
+      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+
+        <html><head>
+
+        <title>301 Moved Permanently</title>
+
+        </head><body>
+
+        <h1>Moved Permanently</h1>
+
+        <p>The document has moved <a href="http://twoffein.com/api/get/drinks/?screen_name=DSIW&amp;api_key=1CBA7V9XFKHJ&amp;encode=xml">here</a>.</p>
+
+        </body></html>
+
+'
+    http_version: 
+  recorded_at: Mon, 20 Aug 2012 17:15:47 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&drink=all&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Aug 2012 20:49:04 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[{"drink":"Kaffee","key":"kaffee","brand":"0"},{"drink":"Milchkaffee","key":"milchkaffee","brand":"0"},{"drink":"Eiskaffee","key":"eiskaffee","brand":"0"},{"drink":"Energy
+        Drink","key":"energiedrink","brand":"0"},{"drink":"Cola","key":"cola","brand":"0"},{"drink":"Cola
+        Light","key":"colalight","brand":"0"},{"drink":"Cola Zero","key":"colazero","brand":"0"},{"drink":"Cola-Mix","key":"colamix","brand":"0"},{"drink":"Cola-Mix
+        Light","key":"colamixlight","brand":"0"},{"drink":"Cola-Mix Zero","key":"colamixzero","brand":"0"},{"drink":"Bubble
+        Tea","key":"bubbletea","brand":"2"},{"drink":"Cherry Cola","key":"cherrycola","brand":"0"},{"drink":"Vanilla
+        Cola","key":"vanillacola","brand":"0"},{"drink":"Caff\u00e9 Latte","key":"cafelatte","brand":"0"},{"drink":"Caff\u00e9
+        au Lait","key":"cafeaulait","brand":"0"},{"drink":"Latte Macchiato","key":"lattemacchiato","brand":"0"},{"drink":"Espresso
+        Macciato","key":"espressomacciato","brand":"0"},{"drink":"Espresso con Panne","key":"espressoconpanne","brand":"0"},{"drink":"Flat
+        White","key":"flatwhite","brand":"0"},{"drink":"Caff\u00e9 Breve","key":"caffebreve","brand":"0"},{"drink":"Caff\u00e9
+        Mocha","key":"caffemocha","brand":"0"},{"drink":"Americano","key":"americano","brand":"0"},{"drink":"Melange","key":"melange","brand":"0"},{"drink":"Red
+        Eye","key":"redeye","brand":"0"},{"drink":"Tee","key":"tee","brand":"2"},{"drink":"Eistee","key":"eistee","brand":"0"},{"drink":"Kakao","key":"kakao","brand":"2"},{"drink":"Mate","key":"mate","brand":"0"},{"drink":"Espresso","key":"espresso","brand":"0"},{"drink":"Cappuccino","key":"cappuccino","brand":"0"},{"drink":"Vannillochino","key":"vannillochino","brand":"0"},{"drink":"Instantkaffee","key":"instantkaffee","brand":"0"},{"drink":"Mokka","key":"mokka","brand":"0"},{"drink":"Chai-Latte","key":"chailatte","brand":"0"},{"drink":"Gr\u00fcnen
+        Tee","key":"guenertee","brand":"0"},{"drink":"Schwarztee","key":"schwarztee","brand":"0"},{"drink":"1337MATE","key":"leetmate","brand":"1"},{"drink":"Club-Mate","key":"clubmate","brand":"1"},{"drink":"Club-Mate
+        Cola","key":"clubmatecola","brand":"1"},{"drink":"ICE-Tea KRAFTSTOFF","key":"kraftstoff","brand":"1"},{"drink":"Premium-Cola","key":"premiumcola","brand":"1"},{"drink":"Dr
+        Pepper","key":"drpepper","brand":"1"},{"drink":"Vita Cola","key":"vitacola","brand":"1"},{"drink":"Vita
+        Cola Mix","key":"vitacolamix","brand":"1"},{"drink":"Vita Cola Pur","key":"vitacolapur","brand":"1"},{"drink":"Schokocino","key":"schokocino","brand":"0"},{"drink":"afri
+        cola","key":"africola","brand":"1"},{"drink":"afri sugarfree","key":"afrisugarfree","brand":"1"},{"drink":"afri
+        power","key":"afripower","brand":"1"},{"drink":"fritz-kola","key":"fritzkola","brand":"1"},{"drink":"fritz-kola
+        stevia","key":"fritzkolastevia","brand":"1"},{"drink":"fritz-kola zuckerfrei","key":"fritzkolazuckerfrei","brand":"1"},{"drink":"mischmasch","key":"mischmasch","brand":"1"},{"drink":"Haji
+        Cola","key":"hajicola","brand":"1"},{"drink":"KILLERFISH Hot Energy","key":"killerfishhotenergy","brand":"1"},{"drink":"Caf\u00e9
+        Frapp\u00e9","key":"cafefrappe","brand":"0"},{"drink":"Energy Shot","key":"energyshot","brand":"0"},{"drink":"Wasser","key":"wasser","brand":"2"},{"drink":"Mineralwasser","key":"mineralwasser","brand":"2"},{"drink":"Apfelsaft","key":"apfelsaft","brand":"2"},{"drink":"Orangensaft","key":"orangensaft","brand":"2"},{"drink":"Milch","key":"milch","brand":"2"},{"drink":"Sojamilch","key":"sojamilch","brand":"2"},{"drink":"Orangenlimonade","key":"orangenlimonade","brand":"2"},{"drink":"Zitronenlimonade","key":"zitronenlimonade","brand":"2"},{"drink":"Kr\u00e4uterlimonade","key":"kraeuterlimonade","brand":"2"},{"drink":"Apfelsaftschorle","key":"apfelsaftschorle","brand":"2"},{"drink":"Ginger
+        Ale","key":"gingerale","brand":"2"},{"drink":"Tonic Water","key":"tonicwater","brand":"2"},{"drink":"Bitter
+        Lemon","key":"bitterlemon","brand":"2"},{"drink":"Bananensaft","key":"bananensaft","brand":"2"},{"drink":"Traubensaft","key":"traubensaft","brand":"2"},{"drink":"Milchshake","key":"milchshake","brand":"2"},{"drink":"Joghurtdrink","key":"joghurtdrink","brand":"2"},{"drink":"Smoothie","key":"smoothie","brand":"2"},{"drink":"Espresso
+        Doppio","key":"espressodoppio","brand":"0"},{"drink":"Fassbrause","key":"fassbrause","brand":"2"},{"drink":"Ayran","key":"ayran","brand":"2"},{"drink":"Flora
+        Power","key":"florapower","brand":"1"},{"drink":"VOLT Cola","key":"voltcola","brand":"1"},{"drink":"COFAIN
+        699","key":"cofain669","brand":"1"},{"drink":"Erdbeersaft","key":"erdbeersaft","brand":"2"},{"drink":"KiBa","key":"kiba","brand":"2"},{"drink":"M\u00fcllermilch","key":"muellermilch","brand":"1"},{"drink":"Malzbier","key":"malzbier","brand":"2"},{"drink":"Rhabarberschorle","key":"rhabarberschorle","brand":"2"}]'
+    http_version: 
+  recorded_at: Tue, 21 Aug 2012 20:49:06 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&drink=all&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Aug 2012 22:17:06 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[{"drink":"Kaffee","key":"kaffee","brand":"0"},{"drink":"Milchkaffee","key":"milchkaffee","brand":"0"},{"drink":"Eiskaffee","key":"eiskaffee","brand":"0"},{"drink":"Energy
+        Drink","key":"energiedrink","brand":"0"},{"drink":"Cola","key":"cola","brand":"0"},{"drink":"Cola
+        Light","key":"colalight","brand":"0"},{"drink":"Cola Zero","key":"colazero","brand":"0"},{"drink":"Cola-Mix","key":"colamix","brand":"0"},{"drink":"Cola-Mix
+        Light","key":"colamixlight","brand":"0"},{"drink":"Cola-Mix Zero","key":"colamixzero","brand":"0"},{"drink":"Bubble
+        Tea","key":"bubbletea","brand":"2"},{"drink":"Cherry Cola","key":"cherrycola","brand":"0"},{"drink":"Vanilla
+        Cola","key":"vanillacola","brand":"0"},{"drink":"Caff\u00e9 Latte","key":"cafelatte","brand":"0"},{"drink":"Caff\u00e9
+        au Lait","key":"cafeaulait","brand":"0"},{"drink":"Latte Macchiato","key":"lattemacchiato","brand":"0"},{"drink":"Espresso
+        Macciato","key":"espressomacciato","brand":"0"},{"drink":"Espresso con Panne","key":"espressoconpanne","brand":"0"},{"drink":"Flat
+        White","key":"flatwhite","brand":"0"},{"drink":"Caff\u00e9 Breve","key":"caffebreve","brand":"0"},{"drink":"Caff\u00e9
+        Mocha","key":"caffemocha","brand":"0"},{"drink":"Americano","key":"americano","brand":"0"},{"drink":"Melange","key":"melange","brand":"0"},{"drink":"Red
+        Eye","key":"redeye","brand":"0"},{"drink":"Tee","key":"tee","brand":"2"},{"drink":"Eistee","key":"eistee","brand":"0"},{"drink":"Kakao","key":"kakao","brand":"2"},{"drink":"Mate","key":"mate","brand":"0"},{"drink":"Espresso","key":"espresso","brand":"0"},{"drink":"Cappuccino","key":"cappuccino","brand":"0"},{"drink":"Vannillochino","key":"vannillochino","brand":"0"},{"drink":"Instantkaffee","key":"instantkaffee","brand":"0"},{"drink":"Mokka","key":"mokka","brand":"0"},{"drink":"Chai-Latte","key":"chailatte","brand":"0"},{"drink":"Gr\u00fcnen
+        Tee","key":"guenertee","brand":"0"},{"drink":"Schwarztee","key":"schwarztee","brand":"0"},{"drink":"1337MATE","key":"leetmate","brand":"1"},{"drink":"Club-Mate","key":"clubmate","brand":"1"},{"drink":"Club-Mate
+        Cola","key":"clubmatecola","brand":"1"},{"drink":"ICE-Tea KRAFTSTOFF","key":"kraftstoff","brand":"1"},{"drink":"Premium-Cola","key":"premiumcola","brand":"1"},{"drink":"Dr
+        Pepper","key":"drpepper","brand":"1"},{"drink":"Vita Cola","key":"vitacola","brand":"1"},{"drink":"Vita
+        Cola Mix","key":"vitacolamix","brand":"1"},{"drink":"Vita Cola Pur","key":"vitacolapur","brand":"1"},{"drink":"Schokocino","key":"schokocino","brand":"0"},{"drink":"afri
+        cola","key":"africola","brand":"1"},{"drink":"afri sugarfree","key":"afrisugarfree","brand":"1"},{"drink":"afri
+        power","key":"afripower","brand":"1"},{"drink":"fritz-kola","key":"fritzkola","brand":"1"},{"drink":"fritz-kola
+        stevia","key":"fritzkolastevia","brand":"1"},{"drink":"fritz-kola zuckerfrei","key":"fritzkolazuckerfrei","brand":"1"},{"drink":"mischmasch","key":"mischmasch","brand":"1"},{"drink":"Haji
+        Cola","key":"hajicola","brand":"1"},{"drink":"KILLERFISH Hot Energy","key":"killerfishhotenergy","brand":"1"},{"drink":"Caf\u00e9
+        Frapp\u00e9","key":"cafefrappe","brand":"0"},{"drink":"Energy Shot","key":"energyshot","brand":"0"},{"drink":"Wasser","key":"wasser","brand":"2"},{"drink":"Mineralwasser","key":"mineralwasser","brand":"2"},{"drink":"Apfelsaft","key":"apfelsaft","brand":"2"},{"drink":"Orangensaft","key":"orangensaft","brand":"2"},{"drink":"Milch","key":"milch","brand":"2"},{"drink":"Sojamilch","key":"sojamilch","brand":"2"},{"drink":"Orangenlimonade","key":"orangenlimonade","brand":"2"},{"drink":"Zitronenlimonade","key":"zitronenlimonade","brand":"2"},{"drink":"Kr\u00e4uterlimonade","key":"kraeuterlimonade","brand":"2"},{"drink":"Apfelsaftschorle","key":"apfelsaftschorle","brand":"2"},{"drink":"Ginger
+        Ale","key":"gingerale","brand":"2"},{"drink":"Tonic Water","key":"tonicwater","brand":"2"},{"drink":"Bitter
+        Lemon","key":"bitterlemon","brand":"2"},{"drink":"Bananensaft","key":"bananensaft","brand":"2"},{"drink":"Traubensaft","key":"traubensaft","brand":"2"},{"drink":"Milchshake","key":"milchshake","brand":"2"},{"drink":"Joghurtdrink","key":"joghurtdrink","brand":"2"},{"drink":"Smoothie","key":"smoothie","brand":"2"},{"drink":"Espresso
+        Doppio","key":"espressodoppio","brand":"0"},{"drink":"Fassbrause","key":"fassbrause","brand":"2"},{"drink":"Ayran","key":"ayran","brand":"2"},{"drink":"Flora
+        Power","key":"florapower","brand":"1"},{"drink":"VOLT Cola","key":"voltcola","brand":"1"},{"drink":"COFAIN
+        699","key":"cofain669","brand":"1"},{"drink":"Erdbeersaft","key":"erdbeersaft","brand":"2"},{"drink":"KiBa","key":"kiba","brand":"2"},{"drink":"M\u00fcllermilch","key":"muellermilch","brand":"1"},{"drink":"Malzbier","key":"malzbier","brand":"2"},{"drink":"Rhabarberschorle","key":"rhabarberschorle","brand":"2"}]'
+    http_version: 
+  recorded_at: Tue, 21 Aug 2012 22:17:08 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&drink=all&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 11:52:39 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[{"drink":"Kaffee","key":"kaffee","brand":"0"},{"drink":"Milchkaffee","key":"milchkaffee","brand":"0"},{"drink":"Eiskaffee","key":"eiskaffee","brand":"0"},{"drink":"Energy
+        Drink","key":"energiedrink","brand":"0"},{"drink":"Cola","key":"cola","brand":"0"},{"drink":"Cola
+        Light","key":"colalight","brand":"0"},{"drink":"Cola Zero","key":"colazero","brand":"0"},{"drink":"Cola-Mix","key":"colamix","brand":"0"},{"drink":"Cola-Mix
+        Light","key":"colamixlight","brand":"0"},{"drink":"Cola-Mix Zero","key":"colamixzero","brand":"0"},{"drink":"Bubble
+        Tea","key":"bubbletea","brand":"2"},{"drink":"Cherry Cola","key":"cherrycola","brand":"0"},{"drink":"Vanilla
+        Cola","key":"vanillacola","brand":"0"},{"drink":"Caff\u00e9 Latte","key":"cafelatte","brand":"0"},{"drink":"Caff\u00e9
+        au Lait","key":"cafeaulait","brand":"0"},{"drink":"Latte Macchiato","key":"lattemacchiato","brand":"0"},{"drink":"Espresso
+        Macciato","key":"espressomacciato","brand":"0"},{"drink":"Espresso con Panne","key":"espressoconpanne","brand":"0"},{"drink":"Flat
+        White","key":"flatwhite","brand":"0"},{"drink":"Caff\u00e9 Breve","key":"caffebreve","brand":"0"},{"drink":"Caff\u00e9
+        Mocha","key":"caffemocha","brand":"0"},{"drink":"Americano","key":"americano","brand":"0"},{"drink":"Melange","key":"melange","brand":"0"},{"drink":"Red
+        Eye","key":"redeye","brand":"0"},{"drink":"Tee","key":"tee","brand":"2"},{"drink":"Eistee","key":"eistee","brand":"0"},{"drink":"Kakao","key":"kakao","brand":"2"},{"drink":"Mate","key":"mate","brand":"0"},{"drink":"Espresso","key":"espresso","brand":"0"},{"drink":"Cappuccino","key":"cappuccino","brand":"0"},{"drink":"Vannillochino","key":"vannillochino","brand":"0"},{"drink":"Instantkaffee","key":"instantkaffee","brand":"0"},{"drink":"Mokka","key":"mokka","brand":"0"},{"drink":"Chai-Latte","key":"chailatte","brand":"0"},{"drink":"Gr\u00fcnen
+        Tee","key":"guenertee","brand":"0"},{"drink":"Schwarztee","key":"schwarztee","brand":"0"},{"drink":"1337MATE","key":"leetmate","brand":"1"},{"drink":"Club-Mate","key":"clubmate","brand":"1"},{"drink":"Club-Mate
+        Cola","key":"clubmatecola","brand":"1"},{"drink":"ICE-Tea KRAFTSTOFF","key":"kraftstoff","brand":"1"},{"drink":"Premium-Cola","key":"premiumcola","brand":"1"},{"drink":"Dr
+        Pepper","key":"drpepper","brand":"1"},{"drink":"Vita Cola","key":"vitacola","brand":"1"},{"drink":"Vita
+        Cola Mix","key":"vitacolamix","brand":"1"},{"drink":"Vita Cola Pur","key":"vitacolapur","brand":"1"},{"drink":"Schokocino","key":"schokocino","brand":"0"},{"drink":"afri
+        cola","key":"africola","brand":"1"},{"drink":"afri sugarfree","key":"afrisugarfree","brand":"1"},{"drink":"afri
+        power","key":"afripower","brand":"1"},{"drink":"fritz-kola","key":"fritzkola","brand":"1"},{"drink":"fritz-kola
+        stevia","key":"fritzkolastevia","brand":"1"},{"drink":"fritz-kola zuckerfrei","key":"fritzkolazuckerfrei","brand":"1"},{"drink":"mischmasch","key":"mischmasch","brand":"1"},{"drink":"Haji
+        Cola","key":"hajicola","brand":"1"},{"drink":"KILLERFISH Hot Energy","key":"killerfishhotenergy","brand":"1"},{"drink":"Caf\u00e9
+        Frapp\u00e9","key":"cafefrappe","brand":"0"},{"drink":"Energy Shot","key":"energyshot","brand":"0"},{"drink":"Wasser","key":"wasser","brand":"2"},{"drink":"Mineralwasser","key":"mineralwasser","brand":"2"},{"drink":"Apfelsaft","key":"apfelsaft","brand":"2"},{"drink":"Orangensaft","key":"orangensaft","brand":"2"},{"drink":"Milch","key":"milch","brand":"2"},{"drink":"Sojamilch","key":"sojamilch","brand":"2"},{"drink":"Orangenlimonade","key":"orangenlimonade","brand":"2"},{"drink":"Zitronenlimonade","key":"zitronenlimonade","brand":"2"},{"drink":"Kr\u00e4uterlimonade","key":"kraeuterlimonade","brand":"2"},{"drink":"Apfelsaftschorle","key":"apfelsaftschorle","brand":"2"},{"drink":"Ginger
+        Ale","key":"gingerale","brand":"2"},{"drink":"Tonic Water","key":"tonicwater","brand":"2"},{"drink":"Bitter
+        Lemon","key":"bitterlemon","brand":"2"},{"drink":"Bananensaft","key":"bananensaft","brand":"2"},{"drink":"Traubensaft","key":"traubensaft","brand":"2"},{"drink":"Milchshake","key":"milchshake","brand":"2"},{"drink":"Joghurtdrink","key":"joghurtdrink","brand":"2"},{"drink":"Smoothie","key":"smoothie","brand":"2"},{"drink":"Espresso
+        Doppio","key":"espressodoppio","brand":"0"},{"drink":"Fassbrause","key":"fassbrause","brand":"2"},{"drink":"Ayran","key":"ayran","brand":"2"},{"drink":"Flora
+        Power","key":"florapower","brand":"1"},{"drink":"VOLT Cola","key":"voltcola","brand":"1"},{"drink":"COFAIN
+        699","key":"cofain669","brand":"1"},{"drink":"Erdbeersaft","key":"erdbeersaft","brand":"2"},{"drink":"KiBa","key":"kiba","brand":"2"},{"drink":"M\u00fcllermilch","key":"muellermilch","brand":"1"},{"drink":"Malzbier","key":"malzbier","brand":"2"},{"drink":"Rhabarberschorle","key":"rhabarberschorle","brand":"2"}]'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 11:52:40 GMT
+- request:
+    method: get
+    uri: http://twoffein.com/api/get/drinks/?api_key=1CBA7V9XFKHJ&drink=all&screen_name=DSIW
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Aug 2012 13:39:53 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.4
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[{"drink":"Kaffee","key":"kaffee","brand":"0"},{"drink":"Milchkaffee","key":"milchkaffee","brand":"0"},{"drink":"Eiskaffee","key":"eiskaffee","brand":"0"},{"drink":"Energy
+        Drink","key":"energiedrink","brand":"0"},{"drink":"Cola","key":"cola","brand":"0"},{"drink":"Cola
+        Light","key":"colalight","brand":"0"},{"drink":"Cola Zero","key":"colazero","brand":"0"},{"drink":"Cola-Mix","key":"colamix","brand":"0"},{"drink":"Cola-Mix
+        Light","key":"colamixlight","brand":"0"},{"drink":"Cola-Mix Zero","key":"colamixzero","brand":"0"},{"drink":"Bubble
+        Tea","key":"bubbletea","brand":"2"},{"drink":"Cherry Cola","key":"cherrycola","brand":"0"},{"drink":"Vanilla
+        Cola","key":"vanillacola","brand":"0"},{"drink":"Caff\u00e9 Latte","key":"cafelatte","brand":"0"},{"drink":"Caff\u00e9
+        au Lait","key":"cafeaulait","brand":"0"},{"drink":"Latte Macchiato","key":"lattemacchiato","brand":"0"},{"drink":"Espresso
+        Macciato","key":"espressomacciato","brand":"0"},{"drink":"Espresso con Panne","key":"espressoconpanne","brand":"0"},{"drink":"Flat
+        White","key":"flatwhite","brand":"0"},{"drink":"Caff\u00e9 Breve","key":"caffebreve","brand":"0"},{"drink":"Caff\u00e9
+        Mocha","key":"caffemocha","brand":"0"},{"drink":"Americano","key":"americano","brand":"0"},{"drink":"Melange","key":"melange","brand":"0"},{"drink":"Red
+        Eye","key":"redeye","brand":"0"},{"drink":"Tee","key":"tee","brand":"2"},{"drink":"Eistee","key":"eistee","brand":"0"},{"drink":"Kakao","key":"kakao","brand":"2"},{"drink":"Mate","key":"mate","brand":"0"},{"drink":"Espresso","key":"espresso","brand":"0"},{"drink":"Cappuccino","key":"cappuccino","brand":"0"},{"drink":"Vannillochino","key":"vannillochino","brand":"0"},{"drink":"Instantkaffee","key":"instantkaffee","brand":"0"},{"drink":"Mokka","key":"mokka","brand":"0"},{"drink":"Chai-Latte","key":"chailatte","brand":"0"},{"drink":"Gr\u00fcnen
+        Tee","key":"guenertee","brand":"0"},{"drink":"Schwarztee","key":"schwarztee","brand":"0"},{"drink":"1337MATE","key":"leetmate","brand":"1"},{"drink":"Club-Mate","key":"clubmate","brand":"1"},{"drink":"Club-Mate
+        Cola","key":"clubmatecola","brand":"1"},{"drink":"ICE-Tea KRAFTSTOFF","key":"kraftstoff","brand":"1"},{"drink":"Premium-Cola","key":"premiumcola","brand":"1"},{"drink":"Dr
+        Pepper","key":"drpepper","brand":"1"},{"drink":"Vita Cola","key":"vitacola","brand":"1"},{"drink":"Vita
+        Cola Mix","key":"vitacolamix","brand":"1"},{"drink":"Vita Cola Pur","key":"vitacolapur","brand":"1"},{"drink":"Schokocino","key":"schokocino","brand":"0"},{"drink":"afri
+        cola","key":"africola","brand":"1"},{"drink":"afri sugarfree","key":"afrisugarfree","brand":"1"},{"drink":"afri
+        power","key":"afripower","brand":"1"},{"drink":"fritz-kola","key":"fritzkola","brand":"1"},{"drink":"fritz-kola
+        stevia","key":"fritzkolastevia","brand":"1"},{"drink":"fritz-kola zuckerfrei","key":"fritzkolazuckerfrei","brand":"1"},{"drink":"mischmasch","key":"mischmasch","brand":"1"},{"drink":"Haji
+        Cola","key":"hajicola","brand":"1"},{"drink":"KILLERFISH Hot Energy","key":"killerfishhotenergy","brand":"1"},{"drink":"Caf\u00e9
+        Frapp\u00e9","key":"cafefrappe","brand":"0"},{"drink":"Energy Shot","key":"energyshot","brand":"0"},{"drink":"Wasser","key":"wasser","brand":"2"},{"drink":"Mineralwasser","key":"mineralwasser","brand":"2"},{"drink":"Apfelsaft","key":"apfelsaft","brand":"2"},{"drink":"Orangensaft","key":"orangensaft","brand":"2"},{"drink":"Milch","key":"milch","brand":"2"},{"drink":"Sojamilch","key":"sojamilch","brand":"2"},{"drink":"Orangenlimonade","key":"orangenlimonade","brand":"2"},{"drink":"Zitronenlimonade","key":"zitronenlimonade","brand":"2"},{"drink":"Kr\u00e4uterlimonade","key":"kraeuterlimonade","brand":"2"},{"drink":"Apfelsaftschorle","key":"apfelsaftschorle","brand":"2"},{"drink":"Ginger
+        Ale","key":"gingerale","brand":"2"},{"drink":"Tonic Water","key":"tonicwater","brand":"2"},{"drink":"Bitter
+        Lemon","key":"bitterlemon","brand":"2"},{"drink":"Bananensaft","key":"bananensaft","brand":"2"},{"drink":"Traubensaft","key":"traubensaft","brand":"2"},{"drink":"Milchshake","key":"milchshake","brand":"2"},{"drink":"Joghurtdrink","key":"joghurtdrink","brand":"2"},{"drink":"Smoothie","key":"smoothie","brand":"2"},{"drink":"Espresso
+        Doppio","key":"espressodoppio","brand":"0"},{"drink":"Fassbrause","key":"fassbrause","brand":"2"},{"drink":"Ayran","key":"ayran","brand":"2"},{"drink":"Flora
+        Power","key":"florapower","brand":"1"},{"drink":"VOLT Cola","key":"voltcola","brand":"1"},{"drink":"COFAIN
+        699","key":"cofain669","brand":"1"},{"drink":"Erdbeersaft","key":"erdbeersaft","brand":"2"},{"drink":"KiBa","key":"kiba","brand":"2"},{"drink":"M\u00fcllermilch","key":"muellermilch","brand":"1"},{"drink":"Malzbier","key":"malzbier","brand":"2"},{"drink":"Rhabarberschorle","key":"rhabarberschorle","brand":"2"}]'
+    http_version: 
+  recorded_at: Wed, 22 Aug 2012 13:39:53 GMT
+recorded_with: VCR 2.2.4

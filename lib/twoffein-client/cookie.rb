@@ -1,4 +1,5 @@
 require_relative "exceptions"
+require_relative "http"
 
 module Twoffein
   class Cookie
@@ -10,7 +11,7 @@ module Twoffein
 
     def post
       info = HTTP.post("cookie", :target_screen_name => @target_screen_name)
-      raise Error.new(info[:code], info[:error]) if info.has_key? :error
+      raise Server::Error.new(info[:code], info[:error]) if info.has_key? :error
       info
     end
     alias send post
