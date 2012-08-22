@@ -1,11 +1,9 @@
 # Twoffein-Client
-Client-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Client::VERSION %> | API-Version: <%= require File.join(File.dirname(__FILE__), "lib/twoffein-client/version.rb"); Twoffein::Server::VERSION %>
+Client-Version: <%= require File.absolute_path("lib/twoffein-client/version.rb", __FILE__); Twoffein::Client::VERSION %> | API-Version: <%= require File.absolute_path("lib/twoffein-client/version.rb", __FILE__); Twoffein::Server::VERSION %>
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
 ## Installation
-
-_This gem isn't deployed on rubygems.org yet. Please clone this repository and run `rake install`._
 
 Add this line to your application's Gemfile:
 

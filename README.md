@@ -1,11 +1,9 @@
 # Twoffein-Client
-Client-Version: 0.0.1 | API-Version:    0.2
+Client-Version: 1.0.0 | API-Version:    0.2
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
 ## Installation
-
-_This gem isn't deployed on rubygems.org yet. Please clone this repository and run `rake install`._
 
 Add this line to your application's Gemfile:
 
@@ -29,7 +27,7 @@ SYNOPSIS
     twoffein-client [global options] command [command options] [arguments...]
 
 VERSION
-    0.0.1
+    1.0.0
 
 GLOBAL OPTIONS
     --help    - Show this message
@@ -54,7 +52,8 @@ COMMANDS
 
 **Output:**
 ```
-Drink  (Key)
+Drink                 (key)
+-------------------------------------------
 Kaffee                (kaffee)
 Milchkaffee           (milchkaffee)
 Eiskaffee             (eiskaffee)
@@ -149,6 +148,8 @@ Müllermilch           (muellermilch)
 
 **Output:**
 ```
+Drink                 (key)
+------------------------------------
 Club-Mate             (clubmate)
 Club-Mate Cola        (clubmatecola)
 ```
@@ -182,7 +183,7 @@ Screen Name:               DSIW
 Lol.
 ```
 
-_You can't send yourself a cookie._
+_Notice: You can't send yourself a cookie._
 
 ### Tweet
 
