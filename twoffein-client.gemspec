@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["dsiw@dsiw-it.de"]
   gem.description   = %q{Client for twoffein.de API}
   gem.summary       = %q{Client for twoffein.de API}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/DSIW/twoffein-client"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('aruba')
   gem.add_development_dependency('rake','~> 0.9.2')
   gem.add_development_dependency('pry')
+  gem.add_development_dependency('webmock')
+  gem.add_development_dependency('vcr')
   gem.add_dependency('methadone', '~>1.0.0.rc4')
   gem.add_dependency('gli')
 end
