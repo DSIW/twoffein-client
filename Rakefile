@@ -7,9 +7,12 @@ require 'cucumber'
 require 'cucumber/rake/task'
 gem 'rdoc' # we need the installed RDoc gem, not the system one
 require 'rdoc/task'
+require 'jeweler'
 
 require 'erb'
 require 'pathname'
+
+require File.expand_path('../lib/twoffein-client/version', __FILE__)
 
 include Rake::DSL
 
@@ -29,11 +32,33 @@ Cucumber::Rake::Task.new(:features) do |t|
 end
 
 Rake::RDocTask.new do |rd|
-  
   rd.main = "README.rdoc"
-  
   rd.rdoc_files.include("README.rdoc","lib/**/*.rb","bin/**/*")
 end
+
+Jeweler::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.name          = "twoffein-client"
+  gem.authors       = ["DSIW"]
+  gem.email         = ["dsiw@dsiw-it.de"]
+  gem.description   = %q{Client for twoffein.de API}
+  gem.summary       = %q{Client for twoffein.de API}
+  gem.homepage      = "https://github.com/DSIW/twoffein-client"
+  #gem.version       = Twoffein::Client::VERSION
+  gem.files         = `git ls-files`.split($\)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ["lib"]
+  gem.add_development_dependency('rdoc')
+  gem.add_development_dependency('aruba')
+  gem.add_development_dependency('rake','~> 0.9.2')
+  gem.add_development_dependency('pry')
+  gem.add_development_dependency('webmock')
+  gem.add_development_dependency('vcr')
+  gem.add_dependency('methadone', '~>1.0.0.rc4')
+  gem.add_dependency('gli')
+end
+Jeweler::RubygemsDotOrgTasks.new
 
 task :default => [:spec,:features]
 
