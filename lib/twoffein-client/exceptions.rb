@@ -8,7 +8,7 @@ module Twoffein
       end
 
       def to_s
-        "Server::Error: #@type (#@message)"
+        "#@type (#@message)"
       end
     end
   end
