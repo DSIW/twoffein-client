@@ -39,8 +39,6 @@ command :drinks do |c|
     if options[:grep]
       puts Drinks.search(/#{options[:grep]}/i)
     else
-      #puts Util.format('Drink') + 'Key'
-      puts "Drink  (Key)"
       puts Drinks.new
     end
   end

@@ -129,10 +129,14 @@ describe Drinks do
       test       = Drink.new("testtetetetsetestset", "test")
       drinks     = Drinks.new([kaffee,clubmate,test])
       drinks.length.should be 3
+
+      header     = "Drink                 (key)"
       kaffee_s   = "Kaffee                (kaffee)"
       clubmate_s = "Club-Mate             (clubmate)"
       test_s     = "testtetetetsetestset  (test)"
-      drinks.to_s.should eq [kaffee_s, clubmate_s, test_s].join("\n")
+      output = [header, kaffee_s, clubmate_s, test_s].join("\n")
+
+      drinks.to_s.should eq output
     end
   end
 end

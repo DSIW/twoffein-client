@@ -60,11 +60,13 @@ module Twoffein
 
     def to_s
       max_length = @all.map { |d| d.name.length }.max
-      @all.map { |d|
+      header = "#{"Drink".ljust(max_length)}  (key)"
+      drinks = @all.map { |d|
         name = d.name
         key = d.key
         "#{name.ljust(max_length)}  (#{key})"
       }.join("\n")
+      [header, drinks].join("\n")
     end
   end
 end
