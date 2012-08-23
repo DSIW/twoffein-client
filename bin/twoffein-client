@@ -24,7 +24,7 @@ command :profile do |c|
     #if options[:grep]
     #puts Profiles.search(/#{options["grep"]}/i)
     #else
-    puts Profile.get profile
+    puts Profile.get(profile)
     #end
   end
 end
@@ -36,11 +36,8 @@ command :drinks do |c|
   c.flag :grep
 
   c.action do |global_options,options,args|
-    if options[:grep]
-      puts Drinks.search(/#{options[:grep]}/i)
-    else
-      puts Drinks.new
-    end
+    drinks = options[:grep] ? Drinks.search(/#{options[:grep]}/i) : Drinks.new
+    puts drinks.to_s
   end
 end
 
@@ -59,7 +56,7 @@ command :tweet do |c|
       info = tweet.publish unless DEBUG
       puts 'Info: ' + info[:info] unless info.nil?
       puts 'Drinks today: ' + info[:tweets].to_s if info && !info[:tweets].nil?
-    rescue Twoffein::Error => e
+    rescue Server::Error => e
       puts e.message
     end
   end
@@ -75,7 +72,7 @@ command :cookie do |c|
     begin
       info = cookie.send unless DEBUG
       puts 'Info: ' + info[:info] unless info.nil?
-    rescue Twoffein::Error => e
+    rescue Server::Error => e
       puts e.message
     end
   end
