@@ -45,7 +45,7 @@ COMMANDS
 ### Credentials
 
 You need your credentials (screen_name, api_key) to get access to the Twoffein-API. Please set these as
-shell environment variables TWOFFEIN_SCREEN_NAME and TWOFFEIN_API_KEY. Thank's!
+shell environment variables `TWOFFEIN_SCREEN_NAME` and `TWOFFEIN_API_KEY`. Thank's!
 
     TWOFFEIN_SCREEN_NAME=NAME TWOFFEIN_API_KEY=KEY twoffein-client drinks
 
