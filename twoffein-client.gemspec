@@ -13,7 +13,9 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "twoffein-client"
   gem.require_paths = ["lib"]
+  gem.license       = "MIT"
   gem.version       = Twoffein::Client::VERSION
+  gem.post_install_message = "Thanks for installing!"
   gem.add_development_dependency('rdoc')
   gem.add_development_dependency('aruba')
   gem.add_development_dependency('rake','~> 0.9.2')
