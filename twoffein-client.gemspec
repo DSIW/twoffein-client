@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/twoffein-client/version', __FILE__)
+require File.absolute_path('../lib/twoffein-client/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["DSIW"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('pry')
   gem.add_development_dependency('webmock')
   gem.add_development_dependency('vcr')
+  gem.add_development_dependency('version')
   gem.add_dependency('methadone', '~>1.0.0.rc4')
   gem.add_dependency('gli')
 end
