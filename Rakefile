@@ -40,16 +40,16 @@ task :default => [:spec,:features]
 module Erb
   require 'erb'
 
-  def rm_basename_ext file, extension
+  def self.rm_basename_ext file, extension
     path = Pathname.new(file)
     path.basename.sub(/\.#{extension}$/, '').to_s
   end
 
-  def target_of file
+  def self.target_of file
     rm_basename_ext(file, "erb")
   end
 
-  def generate_file file, options={}
+  def self.generate_file file, options={}
     target = target_of file
     puts "generating #{target}"
     return if options[:noop]

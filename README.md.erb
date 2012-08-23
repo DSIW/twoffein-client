@@ -1,5 +1,5 @@
 # Twoffein-Client
-Client-Version: <%= require File.absolute_path("lib/twoffein-client/version.rb", __FILE__); Twoffein::Client::VERSION %> | API-Version: <%= require File.absolute_path("lib/twoffein-client/version.rb", __FILE__); Twoffein::Server::VERSION %>
+Client-Version: <%= require File.absolute_path("../lib/twoffein-client/version.rb", __FILE__); Twoffein::Client::VERSION %> | API-Version: <%= require File.absolute_path("../lib/twoffein-client/version.rb", __FILE__); Twoffein::Server::VERSION %>
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ## Examples
 <%
-    def example(title, command);
+    def self.example(title, command);
         title = "### #{title}"
         input = "**Input:**\n\n    #{command.gsub("bundle exec bin/",'')}"
         output = "**Output:**\n```\n#{%x[#{command}]}```"
