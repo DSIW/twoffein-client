@@ -11,6 +11,7 @@ require 'rdoc/task'
 require 'pathname'
 
 require File.expand_path('../lib/twoffein-client/version', __FILE__)
+require File.expand_path('../lib/twoffein-client/env', __FILE__)
 
 include Rake::DSL
 
