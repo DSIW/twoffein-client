@@ -5,3 +5,5 @@ html
 *~
 *.swp
 Gemfile.lock
+fixtures/vcr_cassettes
+lib/twoffein-client/env.rb
