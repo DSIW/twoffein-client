@@ -3,6 +3,8 @@ Client-Version: 0.1.0 | API-Version: 0.2
 
 This client for [Twoffein](http://twoffein.com/)'s [API](http://twoffein.com/api-faq/).
 
+[![Build Status](https://secure.travis-ci.org/DSIW/twoffein-client.png)](http://travis-ci.org/DSIW/twoffein-client)
+
 ## Installation
 
 Add this line to your application's Gemfile:
