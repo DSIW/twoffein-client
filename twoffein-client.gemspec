@@ -23,6 +23,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('webmock')
   gem.add_development_dependency('vcr')
   gem.add_development_dependency('version')
+  gem.add_development_dependency('simplecov')
   gem.add_dependency('methadone', '~>1.0.0.rc4')
   gem.add_dependency('gli')
 end
