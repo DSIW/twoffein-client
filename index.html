@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Twoffein-client by DSIW</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Twoffein-client</h1>
+        <p class="header">Client for twoffein.de API</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/DSIW/twoffein-client/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/DSIW/twoffein-client/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/DSIW/twoffein-client">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/DSIW">DSIW</a></p>
+
+
+      </header>
+      <section>
+        <h1>Twoffein-Client</h1>
+
+<p>Client-Version: 0.1.0 | API-Version: 0.2</p>
+
+<p>This client for <a href="http://twoffein.com/">Twoffein</a>'s <a href="http://twoffein.com/api-faq/">API</a>.</p>
+
+<h2>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'twoffein-client'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install twoffein-client
+</code></pre>
+
+<h2>Usage</h2>
+
+<pre><code>NAME
+    twoffein-client - Client for API 0.2 twoffein.de
+
+SYNOPSIS
+    twoffein-client [global options] command [command options] [arguments...]
+
+VERSION
+    0.1.0
+
+GLOBAL OPTIONS
+    --help    - Show this message
+    --version - Show version
+
+COMMANDS
+    cookie  - Give cookie to RECEIVER
+    drinks  - List all drinks
+    help    - Shows a list of commands or help for one command
+    profile - List the profile, which you have chosen by PROFILE
+    tweet   - Tweet your drinking DRINK
+
+</code></pre>
+
+<h3>Credentials</h3>
+
+<p>You need your credentials (screen_name, api_key) to get access to the Twoffein-API. Please set these as
+shell environment variables <code>TWOFFEIN_SCREEN_NAME</code> and <code>TWOFFEIN_API_KEY</code>. Thank's!</p>
+
+<pre><code>TWOFFEIN_SCREEN_NAME=NAME TWOFFEIN_API_KEY=KEY twoffein-client drinks
+</code></pre>
+
+<h2>Examples</h2>
+
+<h3>Drinks</h3>
+
+<p><strong>Input:</strong></p>
+
+<pre><code>twoffein-client drinks
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Drink                  (key)
+--------------------------------------------
+Kaffee                 (kaffee)
+Milchkaffee            (milchkaffee)
+Eiskaffee              (eiskaffee)
+Energy Drink           (energiedrink)
+Cola                   (cola)
+Cola Light             (colalight)
+Cola Zero              (colazero)
+Cola-Mix               (colamix)
+Cola-Mix Light         (colamixlight)
+Cola-Mix Zero          (colamixzero)
+Bubble Tea             (bubbletea)
+Cherry Cola            (cherrycola)
+Vanilla Cola           (vanillacola)
+Caffé Latte            (cafelatte)
+Caffé au Lait          (cafeaulait)
+Latte Macchiato        (lattemacchiato)
+Espresso Macciato      (espressomacciato)
+Espresso con Panne     (espressoconpanne)
+Flat White             (flatwhite)
+Caffé Breve            (caffebreve)
+Caffé Mocha            (caffemocha)
+Americano              (americano)
+Melange                (melange)
+Red Eye                (redeye)
+Tee                    (tee)
+Eistee                 (eistee)
+Kakao                  (kakao)
+Mate                   (mate)
+Espresso               (espresso)
+Cappuccino             (cappuccino)
+Vannillochino          (vannillochino)
+Instantkaffee          (instantkaffee)
+Mokka                  (mokka)
+Chai-Latte             (chailatte)
+Grünen Tee             (guenertee)
+Schwarztee             (schwarztee)
+1337MATE               (leetmate)
+Club-Mate              (clubmate)
+Club-Mate Cola         (clubmatecola)
+ICE-Tea KRAFTSTOFF     (kraftstoff)
+Premium-Cola           (premiumcola)
+Dr Pepper              (drpepper)
+Vita Cola              (vitacola)
+Vita Cola Mix          (vitacolamix)
+Vita Cola Pur          (vitacolapur)
+Schokocino             (schokocino)
+afri cola              (africola)
+afri sugarfree         (afrisugarfree)
+afri power             (afripower)
+fritz-kola             (fritzkola)
+fritz-kola stevia      (fritzkolastevia)
+fritz-kola zuckerfrei  (fritzkolazuckerfrei)
+mischmasch             (mischmasch)
+Haji Cola              (hajicola)
+KILLERFISH Hot Energy  (killerfishhotenergy)
+Café Frappé            (cafefrappe)
+Energy Shot            (energyshot)
+Wasser                 (wasser)
+Mineralwasser          (mineralwasser)
+Apfelsaft              (apfelsaft)
+Orangensaft            (orangensaft)
+Milch                  (milch)
+Sojamilch              (sojamilch)
+Orangenlimonade        (orangenlimonade)
+Zitronenlimonade       (zitronenlimonade)
+Kräuterlimonade        (kraeuterlimonade)
+Apfelsaftschorle       (apfelsaftschorle)
+Ginger Ale             (gingerale)
+Tonic Water            (tonicwater)
+Bitter Lemon           (bitterlemon)
+Bananensaft            (bananensaft)
+Traubensaft            (traubensaft)
+Milchshake             (milchshake)
+Joghurtdrink           (joghurtdrink)
+Smoothie               (smoothie)
+Espresso Doppio        (espressodoppio)
+Fassbrause             (fassbrause)
+Ayran                  (ayran)
+Flora Power            (florapower)
+VOLT Cola              (voltcola)
+COFAIN 699             (cofain669)
+Erdbeersaft            (erdbeersaft)
+KiBa                   (kiba)
+Müllermilch            (muellermilch)
+Malzbier               (malzbier)
+Rhabarberschorle       (rhabarberschorle)
+</code></pre>
+
+<h3>Drinks (filtered)</h3>
+
+<p><strong>Input:</strong></p>
+
+<pre><code>twoffein-client drinks --grep club
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Drink           (key)
+------------------------------
+Club-Mate       (clubmate)
+Club-Mate Cola  (clubmatecola)
+</code></pre>
+
+<h3>Profile</h3>
+
+<p><strong>Input:</strong></p>
+
+<pre><code>twoffein-client profile
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Quest:                     Blitzlicht
+Drink:                     Club-Mate
+Rank:                      74
+Rank Title:                Kaffeekännchen
+Drunken:                   16
+Bluttwoffeinkonzentration: 1%
+First Login:               2012-07-08 13:36
+Screen Name:               DSIW
+</code></pre>
+
+<h3>Cookie</h3>
+
+<p><strong>Input:</strong></p>
+
+<pre><code>twoffein-client cookie DSIW
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Lol.
+</code></pre>
+
+<p><em>Notice: You can't send yourself a cookie.</em></p>
+
+<h3>Tweet</h3>
+
+<p><strong>Input:</strong></p>
+
+<pre><code>twoffein-client tweet clubmate
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Ich trinke gerade Club-Mate.
+Info: Youre Tweet has been tweeted. Thanks.
+Drinks today: 2
+</code></pre>
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
